@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lettre-pro.fr/sitemap.xml
