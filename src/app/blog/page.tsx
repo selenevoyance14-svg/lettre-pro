@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { blogArticles } from "./blogData";
 
 export const metadata: Metadata = {
-    title: "Blog — Conseils lettres de motivation & lettres officielles | Lettre Pro",
+    title: "Guides pour rédiger vos lettres",
     description: "Guides, modèles et conseils pour rédiger vos lettres de motivation, résiliations, réclamations et mises en demeure. Articles gratuits et pratiques.",
+    alternates: { canonical: "/blog" },
 };
 
 export default function BlogPage() {
@@ -54,20 +55,20 @@ export default function BlogPage() {
                         ))}
                     </div>
 
-                    {/* CTA vers services payants */}
+                    {/* CTA vers les modèles gratuits */}
                     <div className="mt-16 bg-pro-50 rounded-2xl border border-pro-100 p-8 text-center">
                         <h2 className="font-heading text-2xl font-bold text-gray-900 mb-3">
-                            Pas envie d&apos;écrire vous-même ?
+                            Besoin d&apos;un point de départ ?
                         </h2>
                         <p className="text-gray-500 mb-6 max-w-lg mx-auto">
-                            Notre IA rédige votre lettre personnalisée en quelques minutes. Plus besoin de chercher les bons mots.
+                            Choisissez un modèle gratuit, copiez-le et adaptez les passages entre crochets à votre situation.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 justify-center">
                             <a href="/motivation" className="btn-primary">
-                                📄 Lettre de motivation — 7€
+                                📄 Modèles de motivation
                             </a>
                             <a href="/officielle" className="btn-secondary">
-                                ⚖️ Lettre officielle — 5€
+                                ⚖️ Modèles officiels
                             </a>
                         </div>
                     </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import CopyButton from "../components/CopyButton";
 
 export const metadata: Metadata = {
     title: "Lettres officielles gratuites : modeles resiliation, reclamation, litige — Lettre Pro",
@@ -201,7 +202,10 @@ export default function OfficiellePage() {
                                     </pre>
                                 </div>
                                 <div className="px-6 py-3 bg-gray-50 border-t border-gray-100">
-                                    <p className="text-xs text-gray-400">Copiez ce modele et personnalisez les champs entre crochets [ ]</p>
+                                    <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+                                        <p className="text-xs text-gray-400">Personnalisez les champs entre crochets [ ] et vérifiez les références avant l&apos;envoi.</p>
+                                        <CopyButton text={m.content} />
+                                    </div>
                                 </div>
                             </div>
                         ))}

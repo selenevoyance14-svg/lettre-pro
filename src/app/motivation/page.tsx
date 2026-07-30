@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import CopyButton from "../components/CopyButton";
 
 export const metadata: Metadata = {
     title: "Lettre de motivation gratuite : modeles et conseils 2026 — Lettre Pro",
@@ -107,7 +108,10 @@ export default function MotivationPage() {
                                     </pre>
                                 </div>
                                 <div className="px-6 py-3 bg-gray-50 border-t border-gray-100">
-                                    <p className="text-xs text-gray-400">Copiez ce modele et personnalisez les champs entre crochets [ ]</p>
+                                    <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+                                        <p className="text-xs text-gray-400">Personnalisez les champs entre crochets [ ] avant l&apos;envoi.</p>
+                                        <CopyButton text={m.content} />
+                                    </div>
                                 </div>
                             </div>
                         ))}

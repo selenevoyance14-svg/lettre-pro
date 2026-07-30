@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#14213d"/><stop offset="1" stop-color="#2457d6"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="1080" cy="80" r="290" fill="#fff" opacity=".06"/>
+  <rect x="760" y="95" width="330" height="440" rx="22" fill="#fff" transform="rotate(3 925 315)"/>
+  <rect x="805" y="155" width="190" height="15" rx="8" fill="#2457d6"/>
+  <g fill="#dce3ef"><rect x="805" y="220" width="240" height="10" rx="5"/><rect x="805" y="250" width="205" height="10" rx="5"/><rect x="805" y="280" width="250" height="10" rx="5"/><rect x="805" y="340" width="230" height="10" rx="5"/><rect x="805" y="370" width="190" height="10" rx="5"/></g>
+  <text x="76" y="110" font-family="Arial,sans-serif" font-size="24" font-weight="800" fill="#bcd0ff">MODÈLES GRATUITS</text>
+  <text x="76" y="225" font-family="Georgia,serif" font-size="76" font-weight="700" fill="#fff">Les bons mots,</text>
+  <text x="76" y="315" font-family="Georgia,serif" font-size="76" font-weight="700" fill="#9fbcff">au bon moment.</text>
+  <text x="76" y="405" font-family="Arial,sans-serif" font-size="29" fill="#dce6ff">Motivation · Résiliation · Réclamation · Recours</text>
+  <rect x="76" y="475" width="250" height="64" rx="13" fill="#fff"/>
+  <text x="112" y="516" font-family="Arial,sans-serif" font-size="25" font-weight="800" fill="#173b9b">LETTRE PRO</text>
+</svg>

@@ -1,0 +1,23 @@
+# Lettre Pro
+
+> Bibliothèque francophone de modèles de lettres gratuits à copier et personnaliser, sans inscription.
+
+## Pages principales
+
+- [Tous les modèles](https://lettre-pro.fr/modeles) : orientation par situation.
+- [Lettres de motivation](https://lettre-pro.fr/motivation) : CDI, stage, alternance et reconversion.
+- [Lettres officielles](https://lettre-pro.fr/officielle) : résiliation, réclamation, mise en demeure, banque, logement et contestation.
+- [Guides pratiques](https://lettre-pro.fr/blog) : 40 articles sur la rédaction, les démarches et les délais.
+
+## Principes
+
+- Tous les modèles sont gratuits et accessibles sans compte.
+- Les champs entre crochets doivent être remplacés par les informations de l'utilisateur.
+- Les modèles juridiques et administratifs sont informatifs et doivent être vérifiés avant envoi.
+- Pour une situation complexe ou un litige important, il convient de consulter un professionnel qualifié.
+- Le site est financé par Google AdSense.
+
+## Contact
+
+- Site : https://lettre-pro.fr/
+- Courriel : contact@lettre-pro.fr

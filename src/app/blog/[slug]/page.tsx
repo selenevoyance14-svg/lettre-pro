@@ -14,8 +14,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const article = blogArticles.find((a) => a.slug === params.slug);
     if (!article) return {};
     return {
-        title: `${article.title} — Lettre Pro`,
+        title: article.title,
         description: article.description,
+        alternates: { canonical: `/blog/${article.slug}` },
         openGraph: {
             title: article.title,
             description: article.description,
@@ -162,10 +163,10 @@ export default function BlogArticlePage({ params }: Props) {
                     <div className="mt-12 bg-gradient-to-br from-pro-600 to-pro-700 rounded-2xl p-8 text-center text-white">
                         <div className="text-3xl mb-3">{article.icon}</div>
                         <h3 className="font-heading text-xl font-bold mb-2">
-                            Pas envie d&apos;écrire vous-même ?
+                            Utilisez un modèle gratuit
                         </h3>
                         <p className="text-pro-100 text-sm mb-6 max-w-md mx-auto">
-                            Notre IA rédige votre lettre personnalisée en quelques minutes, avec les bonnes formulations et références juridiques.
+                            Copiez un modèle adapté, personnalisez les champs et vérifiez les informations avant l&apos;envoi.
                         </p>
                         <a href={article.cta.href} className="btn-accent text-base">
                             {article.cta.text}
