@@ -20,6 +20,15 @@ export default function MentionsLegalesPage() {
                     <h2 className="font-semibold text-gray-900 text-base mb-2">Propriété intellectuelle</h2>
                     <p>L'ensemble du contenu du site est protégé par le droit d'auteur. Toute reproduction sans autorisation est interdite.</p>
                 </section>
+                <section>
+                    <h2 className="font-semibold text-gray-900 text-base mb-2">Affiliation Amazon</h2>
+                    <p>
+                        En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.
+                        Certains liens présents dans les guides sont affiliés et peuvent générer une commission sans modifier
+                        le prix payé par l&apos;utilisateur. Lettre Pro ne vend pas ces produits et n&apos;affiche pas leurs prix.
+                        Le prix, la disponibilité, la livraison et le service après-vente relèvent d&apos;Amazon et du vendeur concerné.
+                    </p>
+                </section>
             </div>
         </div>
     );

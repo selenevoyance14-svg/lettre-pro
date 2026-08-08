@@ -122,6 +122,14 @@ function renderMarkdown(content: string) {
 
 function formatInline(text: string): string {
     return text
+        .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, (_match, label: string, url: string) => {
+            const safeUrl = url.replace(/"/g, '&quot;');
+            const isAmazon = /(?:amazon\.fr|amzn\.to)/i.test(url);
+            const rel = isAmazon
+                ? 'sponsored nofollow noopener noreferrer'
+                : 'noopener noreferrer';
+            return `<a href="${safeUrl}" target="_blank" rel="${rel}" class="text-pro-600 font-medium hover:underline">${label}</a>`;
+        })
         .replace(/\*\*(.+?)\*\*/g, '<strong class="text-gray-800 font-semibold">$1</strong>')
         .replace(/\*(.+?)\*/g, '<em class="text-gray-500 italic">$1</em>');
 }
@@ -129,6 +137,7 @@ function formatInline(text: string): string {
 export default function BlogArticlePage({ params }: Props) {
     const article = blogArticles.find((a) => a.slug === params.slug);
     if (!article) notFound();
+    const containsAmazonLinks = /(?:amazon\.fr|amzn\.to)/i.test(article.content);
 
     return (
         <>
@@ -156,6 +165,15 @@ export default function BlogArticlePage({ params }: Props) {
             <section className="py-14 sm:py-20">
                 <div className="max-w-2xl mx-auto px-4 sm:px-6">
                     <article className="space-y-1">
+                        {containsAmazonLinks ? (
+                            <aside className="mb-8 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-relaxed text-amber-900">
+                                <strong>Transparence Amazon</strong>
+                                <p className="mt-1">
+                                    En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.
+                                    Le prix et la disponibilité sont à vérifier directement sur Amazon.
+                                </p>
+                            </aside>
+                        ) : null}
                         {renderMarkdown(article.content)}
                     </article>
 

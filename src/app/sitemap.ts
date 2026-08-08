@@ -3,7 +3,7 @@ import { blogArticles } from "./blog/blogData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const base = "https://lettre-pro.fr";
-    const pages = ["", "/modeles", "/motivation", "/officielle", "/blog", "/mentions-legales", "/confidentialite"];
+    const pages = ["", "/modeles", "/motivation", "/officielle", "/blog", "/mentions-legales", "/affiliation-amazon", "/confidentialite"];
     const staticPages = pages.map((path) => ({
         url: `${base}${path}`,
         lastModified: new Date("2026-07-30"),
