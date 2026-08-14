@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { letterTemplates } from "./lettersData";
 
 export const metadata: Metadata = {
     title: "Modèles de lettres gratuits",
@@ -68,6 +69,24 @@ export default function ModelesPage() {
                 </div>
             </section>
             <section className="lp-section">
+                <div className="lp-shell">
+                    <div className="lp-heading">
+                        <div><span className="lp-eyebrow">Prêts à personnaliser</span><h2>Choisissez votre lettre.</h2></div>
+                        <p>Chaque modèle s’ouvre dans un éditeur gratuit. Vous pouvez modifier le texte, le copier, le télécharger ou l’enregistrer en PDF.</p>
+                    </div>
+                    <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                        {letterTemplates.map((template) => (
+                            <Link key={template.slug} href={`/modeles/${template.slug}`} className="group rounded-2xl border border-gray-200 bg-white p-6 transition hover:-translate-y-1 hover:border-pro-300 hover:shadow-md">
+                                <span className="text-xs font-bold uppercase tracking-wider text-pro-600">{template.tag}</span>
+                                <h2 className="mt-3 font-heading text-xl font-bold text-gray-900 group-hover:text-pro-700">{template.shortTitle}</h2>
+                                <p className="mt-3 text-sm leading-relaxed text-gray-500">{template.description}</p>
+                                <b className="mt-5 block text-sm text-pro-700">Personnaliser gratuitement →</b>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </section>
+            <section className="lp-section lp-section-alt">
                 <div className="lp-shell max-w-3xl text-center">
                     <span className="lp-eyebrow">Besoin de contexte ?</span>
                     <h2 className="font-heading text-4xl font-bold my-4">Consultez nos guides avant l’envoi.</h2>
