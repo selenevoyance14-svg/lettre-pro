@@ -10,7 +10,6 @@ export const metadata: Metadata = {
     },
     description: "Modèles gratuits de lettres de motivation, résiliation, réclamation, recours et mise en demeure. Copiez, personnalisez et envoyez.",
     keywords: ["modèle de lettre gratuit", "lettre de motivation", "lettre de résiliation", "lettre de réclamation", "mise en demeure"],
-    alternates: { canonical: "/" },
     openGraph: {
         title: "Lettre Pro — Les bons mots, au bon moment",
         description: "Des modèles de lettres gratuits, clairs et immédiatement utilisables.",

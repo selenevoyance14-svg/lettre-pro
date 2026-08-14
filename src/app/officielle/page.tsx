@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
-import CopyButton from "../components/CopyButton";
+import Link from "next/link";
+import { getLettersByCategory } from "../modeles/lettersData";
 
 export const metadata: Metadata = {
-    title: "Lettres officielles gratuites : modeles resiliation, reclamation, litige — Lettre Pro",
-    description: "Modeles de lettres officielles gratuits : resiliation, reclamation, mise en demeure, contestation PV, litige banque. Prets a personnaliser.",
+    title: "Modèles de lettres officielles gratuits",
+    description: "Modèles gratuits de résiliation, réclamation, mise en demeure et contestation à personnaliser en ligne.",
+    alternates: { canonical: "/officielle" },
 };
-
-const modeles = [
+/* Les modèles complets sont centralisés dans /modeles/lettersData.ts. */
+const anciensModeles = [
     {
         title: "Lettre de resiliation d'abonnement",
         tag: "Resiliation",
@@ -154,6 +156,7 @@ Veuillez agreer, Madame, Monsieur, l'expression de mes salutations distinguees.
 ];
 
 export default function OfficiellePage() {
+    const modeles = getLettersByCategory("officielle");
     return (
         <>
             {/* HEADER */}
@@ -186,28 +189,14 @@ export default function OfficiellePage() {
             {/* MODELES */}
             <section className="py-14 sm:py-20">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6">
-                    <div className="space-y-8">
-                        {modeles.map((m, i) => (
-                            <div key={i} className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-                                <div className="px-6 py-4 border-b border-gray-100 bg-gray-50 flex items-center justify-between">
-                                    <div className="flex items-center gap-3">
-                                        <h2 className="font-heading font-bold text-gray-900">{m.title}</h2>
-                                        <span className="badge-free text-xs">{m.tag}</span>
-                                    </div>
-                                    <span className="badge-free text-xs">Gratuit</span>
-                                </div>
-                                <div className="p-6">
-                                    <pre className="text-xs text-gray-600 whitespace-pre-wrap leading-relaxed font-mono">
-                                        {m.content}
-                                    </pre>
-                                </div>
-                                <div className="px-6 py-3 bg-gray-50 border-t border-gray-100">
-                                    <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-                                        <p className="text-xs text-gray-400">Personnalisez les champs entre crochets [ ] et vérifiez les références avant l&apos;envoi.</p>
-                                        <CopyButton text={m.content} />
-                                    </div>
-                                </div>
-                            </div>
+                    <div className="grid gap-6 md:grid-cols-2">
+                        {modeles.map((m) => (
+                            <Link key={m.slug} href={`/modeles/${m.slug}`} className="group rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+                                <span className="badge-free text-xs">{m.tag}</span>
+                                <h2 className="mt-4 font-heading text-xl font-bold text-gray-900 group-hover:text-pro-700">{m.shortTitle}</h2>
+                                <p className="mt-3 text-sm leading-relaxed text-gray-500">{m.description}</p>
+                                <b className="mt-6 block text-sm text-pro-700">Personnaliser ce modèle →</b>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -223,10 +212,10 @@ export default function OfficiellePage() {
                         Consultez nos articles pour rediger des lettres encore plus percutantes.
                     </p>
                     <div className="flex flex-wrap justify-center gap-3">
-                        <a href="/blog/lettre-resiliation-guide-complet" className="btn-secondary text-sm">Guide resiliation</a>
-                        <a href="/blog/contester-pv-amende-2026" className="btn-secondary text-sm">Contester un PV</a>
-                        <a href="/blog/modele-mise-en-demeure" className="btn-secondary text-sm">Mise en demeure</a>
-                        <a href="/blog/lettre-banque-frais-abusifs" className="btn-secondary text-sm">Frais bancaires</a>
+                        <a href="/blog/lettre-resiliation-droits-modeles" className="btn-secondary text-sm">Guide résiliation</a>
+                        <a href="/blog/contester-amende-guide-complet" className="btn-secondary text-sm">Contester un PV</a>
+                        <a href="/blog/mise-en-demeure-quand-comment" className="btn-secondary text-sm">Mise en demeure</a>
+                        <a href="/blog/lettre-reclamation-faire-valoir-droits" className="btn-secondary text-sm">Réclamation</a>
                     </div>
                 </div>
             </section>

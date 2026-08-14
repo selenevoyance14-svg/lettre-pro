@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Conditions d'utilisation — Lettre Pro" };
+export const metadata: Metadata = {
+    title: "Conditions d’utilisation",
+    alternates: { canonical: "/cgv" },
+};
 
 export default function CGVPage() {
     return (

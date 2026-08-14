@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
 import { blogArticles } from "./blog/blogData";
+import { letterTemplates } from "./modeles/lettersData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const base = "https://lettre-pro.fr";
-    const pages = ["", "/modeles", "/motivation", "/officielle", "/blog", "/mentions-legales", "/confidentialite"];
+    const pages = ["", "/modeles", "/motivation", "/officielle", "/blog", "/mentions-legales", "/confidentialite", "/cgv"];
     const staticPages = pages.map((path) => ({
         url: `${base}${path}`,
         lastModified: new Date("2026-07-30"),
@@ -16,5 +17,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
         changeFrequency: "monthly" as const,
         priority: .7,
     }));
-    return [...staticPages, ...articles];
+    const templates = letterTemplates.map((template) => ({
+        url: `${base}/modeles/${template.slug}`,
+        lastModified: new Date("2026-08-14"),
+        changeFrequency: "monthly" as const,
+        priority: .85,
+    }));
+    return [...staticPages, ...templates, ...articles];
 }
