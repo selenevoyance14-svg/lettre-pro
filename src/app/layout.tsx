@@ -10,7 +10,6 @@ export const metadata: Metadata = {
     },
     description: "Modèles gratuits de lettres de motivation, résiliation, réclamation, recours et mise en demeure. Copiez, personnalisez et envoyez.",
     keywords: ["modèle de lettre gratuit", "lettre de motivation", "lettre de résiliation", "lettre de réclamation", "mise en demeure"],
-    alternates: { canonical: "/" },
     openGraph: {
         title: "Lettre Pro — Les bons mots, au bon moment",
         description: "Des modèles de lettres gratuits, clairs et immédiatement utilisables.",
@@ -88,6 +87,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     return (
         <html lang="fr">
             <head>
+                <meta name="google-adsense-account" content="ca-pub-5064203547863113" />
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5064203547863113" crossOrigin="anonymous" />
             </head>
             <body><Header /><main>{children}</main><Footer /></body>
