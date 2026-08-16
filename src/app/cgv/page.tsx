@@ -32,7 +32,7 @@ export default function CGVPage() {
                 </section>
                 <section>
                     <h2 className="font-semibold text-gray-900 text-base mb-2">6. Contact</h2>
-                    <p>Pour toute question : <a href="mailto:contact@lettre-pro.fr" className="text-pro-600 hover:underline">contact@lettre-pro.fr</a>.</p>
+                    <p>Pour toute question : <a href="mailto:bonsplansmania@gmail.com" className="text-pro-600 hover:underline">bonsplansmania@gmail.com</a>.</p>
                 </section>
             </div>
         </div>

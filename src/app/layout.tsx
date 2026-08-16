@@ -66,8 +66,9 @@ function Footer() {
                 <div>
                     <strong>Informations</strong>
                     <Link href="/mentions-legales">Mentions légales</Link>
+                    <Link href="/affiliation-amazon">Affiliation Amazon</Link>
                     <Link href="/confidentialite">Confidentialité</Link>
-                    <a href="mailto:contact@lettre-pro.fr">Contact</a>
+                    <a href="mailto:bonsplansmania@gmail.com">Contact</a>
                 </div>
                 <div className="lp-footer-note">
                     <strong>À savoir</strong>
@@ -75,7 +76,8 @@ function Footer() {
                 </div>
             </div>
             <div className="lp-shell lp-copyright">
-                <span>© 2026 Lettre Pro</span><span>Gratuit · Sans inscription</span>
+                <span>© 2026 Lettre Pro</span>
+                <span>En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.</span>
             </div>
         </footer>
     );

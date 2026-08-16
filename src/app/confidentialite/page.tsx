@@ -25,7 +25,7 @@ export default function ConfidentialitePage() {
                 </section>
                 <section>
                     <h2 className="font-semibold text-gray-900 text-base mb-2">Vos droits</h2>
-                    <p>Conformément au RGPD, vous disposez notamment de droits d&apos;accès, de rectification, d&apos;effacement, de limitation et d&apos;opposition. Contact : <a href="mailto:contact@lettre-pro.fr" className="text-pro-600 hover:underline">contact@lettre-pro.fr</a></p>
+                    <p>Conformément au RGPD, vous disposez notamment de droits d&apos;accès, de rectification, d&apos;effacement, de limitation et d&apos;opposition. Contact : <a href="mailto:bonsplansmania@gmail.com" className="text-pro-600 hover:underline">bonsplansmania@gmail.com</a></p>
                 </section>
             </div>
         </div>

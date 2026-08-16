@@ -122,6 +122,11 @@ function renderMarkdown(content: string) {
 
 function formatInline(text: string): string {
     return text
+        .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, (_match, label: string, url: string) => {
+            const isAmazon = /^https:\/\/(?:www\.)?amazon\.fr\//i.test(url) || /^https:\/\/amzn\.to\//i.test(url);
+            const rel = isAmazon ? "sponsored noopener noreferrer" : "noopener noreferrer";
+            return `<a href="${url}" target="_blank" rel="${rel}" class="text-pro-700 underline decoration-pro-300 underline-offset-2 hover:text-pro-900">${label}</a>`;
+        })
         .replace(/\*\*(.+?)\*\*/g, '<strong class="text-gray-800 font-semibold">$1</strong>')
         .replace(/\*(.+?)\*/g, '<em class="text-gray-500 italic">$1</em>');
 }
@@ -158,6 +163,13 @@ export default function BlogArticlePage({ params }: Props) {
                     <article className="space-y-1">
                         {renderMarkdown(article.content)}
                     </article>
+
+                    {article.content.includes("amazon.fr") && (
+                        <aside className="mt-10 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-relaxed text-amber-950">
+                            <strong>Liens affiliés Amazon :</strong> certains liens de ce guide peuvent nous rapporter une commission, sans coût supplémentaire pour vous. Les recommandations restent sélectionnées pour leur pertinence.
+                            {" "}<a href="/affiliation-amazon" className="font-semibold underline underline-offset-2">En savoir plus</a>
+                        </aside>
+                    )}
 
                     {/* CTA intégré */}
                     <div className="mt-12 bg-gradient-to-br from-pro-600 to-pro-700 rounded-2xl p-8 text-center text-white">
