@@ -68,7 +68,7 @@ function Footer() {
                     <Link href="/mentions-legales">Mentions légales</Link>
                     <Link href="/affiliation-amazon">Affiliation Amazon</Link>
                     <Link href="/confidentialite">Confidentialité</Link>
-                    <a href="mailto:contact@lettre-pro.fr">Contact</a>
+                    <a href="mailto:bonsplansmania@gmail.com">Contact</a>
                 </div>
                 <div className="lp-footer-note">
                     <strong>À savoir</strong>

@@ -12,7 +12,7 @@ export default function MentionsLegalesPage() {
             <div className="space-y-6 text-sm text-gray-600 leading-relaxed">
                 <section>
                     <h2 className="font-semibold text-gray-900 text-base mb-2">Éditeur du site</h2>
-                    <p>Site lettre-pro.fr — <a href="mailto:contact@lettre-pro.fr" className="text-pro-600 hover:underline">contact@lettre-pro.fr</a></p>
+                    <p>Site lettre-pro.fr — <a href="mailto:bonsplansmania@gmail.com" className="text-pro-600 hover:underline">bonsplansmania@gmail.com</a></p>
                     <p>SIRET : 10133158500014</p>
                 </section>
                 <section>

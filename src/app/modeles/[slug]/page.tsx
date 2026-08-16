@@ -32,7 +32,8 @@ export default function LetterTemplatePage({ params }: Props) {
     if (!template) notFound();
 
     const related = letterTemplates
-        .filter((item) => item.category === template.category && item.slug !== template.slug)
+        .filter((item) => item.slug !== template.slug)
+        .sort((a, b) => Number(b.tag === template.tag) - Number(a.tag === template.tag))
         .slice(0, 3);
 
     const schema = {
@@ -41,7 +42,7 @@ export default function LetterTemplatePage({ params }: Props) {
         name: template.title,
         description: template.description,
         inLanguage: "fr-FR",
-        dateModified: "2026-08-14",
+        dateModified: "2026-08-16",
         step: [
             { "@type": "HowToStep", name: "Personnaliser", text: "Remplacez les passages entre crochets par vos informations." },
             { "@type": "HowToStep", name: "Vérifier", text: "Relisez les faits, dates, références et coordonnées." },

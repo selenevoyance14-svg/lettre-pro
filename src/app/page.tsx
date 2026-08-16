@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { blogArticles } from "./blog/blogData";
+import { letterTemplates } from "./modeles/lettersData";
 
 export const metadata: Metadata = {
     title: "Modèles de lettres gratuits à copier | Lettre Pro",
@@ -23,6 +24,9 @@ const steps = [
 
 export default function Home() {
     const featured = blogArticles.slice(0, 3);
+    const popularModels = ["lettre-demission-cdi", "lettre-preavis-logement-1-mois", "lettre-resiliation-assurance-habitation", "lettre-motivation-candidature-spontanee"]
+        .map((slug) => letterTemplates.find((template) => template.slug === slug))
+        .filter((template): template is (typeof letterTemplates)[number] => Boolean(template));
 
     const schema = {
         "@context": "https://schema.org",
@@ -51,9 +55,9 @@ export default function Home() {
                             <Link className="lp-button lp-button-secondary" href="/motivation">Lettre de motivation</Link>
                         </div>
                         <div className="lp-proof">
-                            <span>✓ 40 guides pratiques</span>
+                            <span>✓ {letterTemplates.length} modèles gratuits</span>
+                            <span>✓ {blogArticles.length} guides pratiques</span>
                             <span>✓ Copie immédiate</span>
-                            <span>✓ Aucun compte demandé</span>
                         </div>
                     </div>
                     <div className="lp-paper-card" aria-label="Aperçu d’un modèle de lettre professionnelle">
@@ -77,6 +81,25 @@ export default function Home() {
                         {categories.map((category) => (
                             <Link className="lp-category-card" href={category.href} key={category.title}>
                                 <span>{category.icon}</span><h3>{category.title}</h3><p>{category.text}</p><b>Voir les modèles →</b>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="lp-section">
+                <div className="lp-shell">
+                    <div className="lp-heading">
+                        <div><span className="lp-eyebrow">Modèles populaires</span><h2>Les démarches du moment.</h2></div>
+                        <p>Des textes prêts à adapter pour les situations les plus courantes, avec les points à vérifier avant l’envoi.</p>
+                    </div>
+                    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                        {popularModels.map((template) => (
+                            <Link key={template.slug} href={`/modeles/${template.slug}`} className="group rounded-2xl border border-gray-200 bg-white p-6 transition hover:-translate-y-1 hover:border-pro-300 hover:shadow-md">
+                                <span className="text-xs font-extrabold uppercase tracking-wider text-pro-600">{template.tag}</span>
+                                <h3 className="mt-4 font-heading text-xl font-bold leading-tight text-gray-900 group-hover:text-pro-700">{template.shortTitle}</h3>
+                                <p className="mt-3 text-sm leading-relaxed text-gray-500">{template.description}</p>
+                                <b className="mt-5 block text-sm text-pro-700">Personnaliser gratuitement →</b>
                             </Link>
                         ))}
                     </div>
@@ -113,7 +136,7 @@ export default function Home() {
                         ))}
                     </div>
                     <div className="lp-actions">
-                        <Link className="lp-button lp-button-secondary" href="/blog">Voir les 40 guides</Link>
+                        <Link className="lp-button lp-button-secondary" href="/blog">Voir les {blogArticles.length} guides</Link>
                     </div>
                 </div>
             </section>
