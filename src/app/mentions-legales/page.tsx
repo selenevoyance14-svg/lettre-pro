@@ -24,7 +24,7 @@ export default function MentionsLegalesPage() {
                 </section>
                 <section>
                     <h2 className="font-semibold text-gray-900 text-base mb-2">Hébergement</h2>
-                    <p>Vercel Inc., 340 Pine Street Suite 701, San Francisco, CA 94104, États-Unis.</p>
+                    <p>Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis — <a href="https://www.cloudflare.com" target="_blank" rel="noopener noreferrer" className="text-pro-600 hover:underline">cloudflare.com</a>.</p>
                 </section>
                 <section>
                     <h2 className="font-semibold text-gray-900 text-base mb-2">Propriété intellectuelle</h2>
