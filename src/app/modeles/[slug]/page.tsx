@@ -80,6 +80,10 @@ export default function LetterTemplatePage({ params }: Props) {
                             Ce modèle est informatif. Pour une démarche officielle, vérifiez les délais, la procédure et les textes applicables à votre situation.
                         </div>
                         {template.relatedGuide && <Link href={template.relatedGuide} className="block rounded-2xl border border-gray-200 bg-white p-5 text-sm font-semibold text-pro-700 hover:border-pro-300">{template.relatedGuideLabel} →</Link>}
+                        <div className="rounded-2xl border border-gray-200 bg-white p-5 text-sm leading-relaxed text-gray-600">
+                            <strong className="block text-gray-900">Modèle relu par la rédaction</strong>
+                            <p className="mt-2">Publié par Nathalie Lebrun. Consultez notre <Link href="/a-propos" className="font-semibold text-pro-700 underline underline-offset-2">méthode éditoriale</Link> ou signalez une correction.</p>
+                        </div>
                     </aside>
                 </div>
             </section>

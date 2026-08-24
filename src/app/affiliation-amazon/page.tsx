@@ -50,7 +50,7 @@ export default function AffiliationAmazonPage() {
 
                         <p className="rounded-xl border border-gray-200 bg-white p-5 text-sm">
                             Une question sur un lien ou une recommandation ? Écrivez-nous à{" "}
-                            <a className="font-semibold text-pro-700 underline" href="mailto:bonsplansmania@gmail.com">bonsplansmania@gmail.com</a>.
+                            <a className="font-semibold text-pro-700 underline" href="mailto:contact@lettre-pro.fr">contact@lettre-pro.fr</a>.
                         </p>
 
                         <Link href="/blog" className="lp-button lp-button-primary">Consulter les guides →</Link>

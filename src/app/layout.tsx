@@ -65,10 +65,12 @@ function Footer() {
                 </div>
                 <div>
                     <strong>Informations</strong>
+                    <Link href="/a-propos">À propos</Link>
                     <Link href="/mentions-legales">Mentions légales</Link>
+                    <Link href="/cgv">Conditions d’utilisation</Link>
                     <Link href="/affiliation-amazon">Affiliation Amazon</Link>
                     <Link href="/confidentialite">Confidentialité</Link>
-                    <a href="mailto:bonsplansmania@gmail.com">Contact</a>
+                    <a href="mailto:contact@lettre-pro.fr">Contact</a>
                 </div>
                 <div className="lp-footer-note">
                     <strong>À savoir</strong>

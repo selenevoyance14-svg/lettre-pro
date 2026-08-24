@@ -56,7 +56,7 @@ Oubliez les formules bateau comme *"Suite à votre annonce parue sur..."*. Privi
 ## Erreur classique à éviter
 
 Ne répétez jamais votre CV dans votre lettre. La lettre de motivation complète votre parcours en apportant du **contexte**, de la **personnalité** et de la **motivation**. C'est votre opportunité de raconter l'histoire que les bullet points de votre CV ne peuvent pas transmettre.`,
-        cta: { href: "/motivation", text: "📄 Générer ma lettre de motivation" },
+        cta: { href: "/motivation", text: "📄 Choisir un modèle gratuit" },
     },
     {
         slug: "5-erreurs-lettre-motivation",
@@ -116,7 +116,7 @@ Même les candidats expérimentés commettent ces erreurs. Selon une étude Robe
 | Politesse bâclée | Non professionnel | Formule complète + CTA |
 
 Ne laissez pas ces erreurs saboter vos chances. Une lettre soignée peut compenser un CV moins impressionnant.`,
-        cta: { href: "/motivation", text: "📄 Générer une lettre sans erreur" },
+        cta: { href: "/motivation", text: "📄 Choisir un modèle gratuit" },
     },
     {
         slug: "lettre-resiliation-droits-modeles",
@@ -180,7 +180,7 @@ Si l'entreprise refuse votre résiliation alors que vous êtes dans votre droit 
 1. Renvoyez votre demande en recommandé avec AR en citant la loi précise
 2. Contactez le **médiateur** du secteur concerné
 3. En dernier recours, saisissez la **DGCCRF** ou le tribunal d'instance`,
-        cta: { href: "/officielle", text: "⚖️ Générer ma lettre de résiliation" },
+        cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
         slug: "contester-amende-guide-complet",
@@ -245,7 +245,7 @@ Oui, contester une amende est un **droit fondamental**. Chaque année, des milli
 ## Et après ?
 
 L'OMP peut classer sans suite (vous gagnez), renvoyer devant le tribunal de police, ou rejeter votre demande. Dans ce dernier cas, vous pouvez encore faire appel devant le tribunal.`,
-        cta: { href: "/officielle", text: "⚖️ Générer ma lettre de contestation" },
+        cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
         slug: "lettre-recommandation-guide",
@@ -311,7 +311,7 @@ Si on vous demande de rédiger une lettre de recommandation pour un collègue, v
 ## Astuce : la recommandation LinkedIn
 
 En complément de la lettre formelle, demandez une **recommandation sur LinkedIn**. Elle est visible par tous les recruteurs et renforce votre profil. Proposez d'écrire un brouillon que votre contact pourra ajuster.`,
-        cta: { href: "/motivation", text: "📄 Générer ma lettre de motivation" },
+        cta: { href: "/motivation", text: "📄 Choisir un modèle gratuit" },
     },
     {
         slug: "mise-en-demeure-quand-comment",
@@ -381,7 +381,7 @@ Avant le tribunal, vous pouvez aussi tenter la **médiation** ou la **conciliati
 ## Conseil final
 
 Une mise en demeure bien rédigée résout **plus de 60 % des litiges** sans passer par la case tribunal. C'est un outil puissant et peu coûteux : le prix d'un recommandé suffit.`,
-        cta: { href: "/officielle", text: "⚖️ Générer ma mise en demeure" },
+        cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
         slug: "candidature-spontanee-reussir-2026",
@@ -445,7 +445,7 @@ Votre candidature spontanée doit répondre à 3 questions :
 | Taux de réponse envoi massif non ciblé | 1-3 % |
 
 La candidature spontanée n'est pas un coup de poker. C'est une **démarche stratégique** qui, bien menée, ouvre des portes que les sites d'emploi ne montrent jamais.`,
-        cta: { href: "/motivation", text: "📄 Générer ma candidature spontanée" },
+        cta: { href: "/motivation", text: "📄 Choisir un modèle gratuit" },
     },
     {
         slug: "lettre-proprietaire-modeles",
@@ -518,7 +518,7 @@ Passé ce délai, le montant est majoré de **10 % du loyer** par mois de retard
 - **Soyez courtois mais ferme** : citez les textes de loi sans agressivité
 - **Respectez les délais** : chaque procédure a ses propres échéances
 - En cas de litige persistant, l'**ADIL** (Agence Départementale d'Information sur le Logement) offre des conseils juridiques gratuits`,
-        cta: { href: "/officielle", text: "⚖️ Générer ma lettre au propriétaire" },
+        cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
         slug: "entretien-embauche-preparation-complete",
@@ -584,7 +584,7 @@ Pour approfondir votre préparation, ces ouvrages sont des références reconnue
 
 - [Réussir ses entretiens d'embauche — Christel de Foucault](https://www.amazon.fr/dp/2100853686?tag=lebrunnathali-21) : un guide pratique avec des mises en situation concrètes
 - [Le guide du CV et de l'entretien d'embauche — Uriel Megnassan](https://www.amazon.fr/dp/2212572239?tag=lebrunnathali-21) : idéal pour préparer chaque étape du recrutement`,
-        cta: { href: "/motivation", text: "📄 Générer ma lettre de motivation" },
+        cta: { href: "/motivation", text: "📄 Choisir un modèle gratuit" },
     },
     {
         slug: "cv-parfait-regles-or-2026",
@@ -648,7 +648,7 @@ Un CV avec des résultats chiffrés a **40 % plus de chances** d'être retenu :
 
 - [Rédiger un CV efficace — Christel de Foucault](https://www.amazon.fr/dp/2212577222?tag=lebrunnathali-21) : toutes les astuces pour se démarquer sur papier
 - [60 CV commentés — Fursac et Barret](https://www.amazon.fr/dp/2100825798?tag=lebrunnathali-21) : exemples réels analysés par des recruteurs`,
-        cta: { href: "/motivation", text: "📄 Générer ma lettre de motivation" },
+        cta: { href: "/motivation", text: "📄 Choisir un modèle gratuit" },
     },
     {
         slug: "lettre-demission-guide-modeles",
@@ -722,7 +722,7 @@ Votre employeur peut vous dispenser de préavis. Dans ce cas :
 ## Lecture recommandée
 
 - [Droit du travail pour les nuls — Julien Boutiron](https://www.amazon.fr/dp/2412093474?tag=lebrunnathali-21) : pour comprendre tous vos droits en tant que salarié`,
-        cta: { href: "/officielle", text: "⚖️ Générer ma lettre de démission" },
+        cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
         slug: "reconversion-professionnelle-guide-2026",
@@ -793,7 +793,7 @@ Votre lettre de motivation est cruciale en reconversion. Elle doit :
 
 - [Réussir sa reconversion — Sylvie Protassieff](https://www.amazon.fr/dp/2212573510?tag=lebrunnathali-21) : une méthode éprouvée étape par étape
 - [Quel métier est fait pour moi ? — Isabelle Servant](https://www.amazon.fr/dp/2412084963?tag=lebrunnathali-21) : pour identifier le métier qui vous correspond vraiment`,
-        cta: { href: "/motivation", text: "📄 Générer ma lettre de reconversion" },
+        cta: { href: "/motivation", text: "📄 Choisir un modèle gratuit" },
     },
     {
         slug: "lettre-reclamation-faire-valoir-droits",
@@ -862,7 +862,7 @@ Un appel téléphonique ne laisse aucune trace. Une lettre de réclamation const
 ## Pour connaître vos droits
 
 - [Vos droits de consommateur — UFC-Que Choisir](https://www.amazon.fr/dp/2705805788?tag=lebrunnathali-21) : le guide de référence sur la protection du consommateur en France`,
-        cta: { href: "/officielle", text: "⚖️ Générer ma lettre de réclamation" },
+        cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
         slug: "premier-emploi-decrocher-premier-cdi",
@@ -925,7 +925,7 @@ C'est votre arme secrète quand le CV est léger. Mettez en avant :
 
 - [Mon premier emploi — Samantha Thouin](https://www.amazon.fr/dp/2412075646?tag=lebrunnathali-21) : guide pratique pour jeunes diplômés
 - [Trouver un emploi grâce aux réseaux sociaux — Patrice de Broissia](https://www.amazon.fr/dp/2212568835?tag=lebrunnathali-21) : maîtriser LinkedIn et les réseaux pour sa recherche`,
-        cta: { href: "/motivation", text: "📄 Générer ma lettre premier emploi" },
+        cta: { href: "/motivation", text: "📄 Choisir un modèle gratuit" },
     },
     {
         slug: "negocier-salaire-techniques-arguments",
@@ -995,7 +995,7 @@ Après avoir formulé votre demande, **ne parlez plus**. Le silence met la press
 
 - [Négocier son salaire — Camy Puech](https://www.amazon.fr/dp/2100843788?tag=lebrunnathali-21) : stratégies concrètes de négociation salariale
 - [L'art de la négociation — Michael Wheeler](https://www.amazon.fr/dp/2100830759?tag=lebrunnathali-21) : les principes de négociation appliqués à toutes les situations`,
-        cta: { href: "/motivation", text: "📄 Générer ma lettre de motivation" },
+        cta: { href: "/motivation", text: "📄 Choisir un modèle gratuit" },
     },
     {
         slug: "mail-professionnel-regles-redaction",
@@ -1065,7 +1065,7 @@ L'objet détermine si votre mail sera ouvert. Les règles :
 ## Pour perfectionner vos écrits professionnels
 
 - [Écrire pour être lu — Anne Vervier](https://www.amazon.fr/dp/2874963003?tag=lebrunnathali-21) : techniques d'écriture claire et efficace pour le monde professionnel`,
-        cta: { href: "/officielle", text: "⚖️ Générer ma lettre officielle" },
+        cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
         slug: "teletravail-droits-obligations-2026",
@@ -1141,7 +1141,7 @@ Un bon espace de travail à domicile améliore la productivité et préserve vot
 
 - [Chaise de bureau ergonomique — Sihoo](https://www.amazon.fr/dp/B0D1RXBHNY?tag=lebrunnathali-21) : un investissement essentiel pour le dos
 - [Rehausseur d'écran avec rangement — Bewood](https://www.amazon.fr/dp/B0CSLZ58MQ?tag=lebrunnathali-21) : pour une posture correcte devant l'écran`,
-        cta: { href: "/officielle", text: "⚖️ Générer ma demande de télétravail" },
+        cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
         slug: "lettre-relance-candidature-modeles",
@@ -1207,7 +1207,7 @@ Si vous n'obtenez toujours pas de réponse après 2 relances :
 ## Lecture recommandée
 
 - [Décrocher un emploi grâce au réseau — Hervé Bommelaer](https://www.amazon.fr/dp/2212569106?tag=lebrunnathali-21) : la méthode complète pour activer son réseau et relancer efficacement`,
-        cta: { href: "/motivation", text: "📄 Générer ma lettre de relance" },
+        cta: { href: "/motivation", text: "📄 Choisir un modèle gratuit" },
     },
     {
         slug: "droits-salaries-code-travail-essentiel",
@@ -1281,7 +1281,7 @@ Trop de salariés ignorent leurs droits fondamentaux. Cette méconnaissance prof
 ## Ouvrage de référence
 
 - [Le droit du travail — Alain Supiot](https://www.amazon.fr/dp/2130829783?tag=lebrunnathali-21) : la référence académique pour comprendre le droit du travail français dans sa globalité`,
-        cta: { href: "/officielle", text: "⚖️ Générer une lettre officielle" },
+        cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
         slug: "stage-alternance-reussir-candidature",
@@ -1350,7 +1350,7 @@ Les questions spécifiques aux étudiants :
 ## Lecture utile
 
 - [Trouver son stage ou son premier emploi — Camille Moreau](https://www.amazon.fr/dp/2212572492?tag=lebrunnathali-21) : conseils concrets pour les étudiants en recherche de stage`,
-        cta: { href: "/motivation", text: "📄 Générer ma lettre de stage" },
+        cta: { href: "/motivation", text: "📄 Choisir un modèle gratuit" },
     },
     {
         slug: "contestation-facture-modeles-lettres",
@@ -1424,7 +1424,7 @@ Si un montant incorrect a été prélevé :
 ## Pour aller plus loin
 
 - [Guide juridique du consommateur — éditions Prat](https://www.amazon.fr/dp/2809518130?tag=lebrunnathali-21) : tous vos droits face aux litiges de consommation`,
-        cta: { href: "/officielle", text: "⚖️ Générer ma lettre de contestation" },
+        cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
         slug: "organiser-recherche-emploi-methode",
@@ -1502,7 +1502,7 @@ La recherche d'emploi est un marathon, pas un sprint. Pour garder le moral :
 
 - [2h chrono pour trouver un emploi — Christel de Foucault](https://www.amazon.fr/dp/2100847198?tag=lebrunnathali-21) : des exercices pratiques pour structurer sa recherche au quotidien
 - [Bullshit Jobs — David Graeber](https://www.amazon.fr/dp/2253820490?tag=lebrunnathali-21) : un regard décalé sur le monde du travail qui aide à repenser ce qu'on cherche vraiment`,
-        cta: { href: "/motivation", text: "📄 Générer ma lettre de motivation" },
+        cta: { href: "/motivation", text: "📄 Choisir un modèle gratuit" },
     },
     {
         slug: "freelance-lettres-modeles-indispensables",
@@ -1580,7 +1580,7 @@ Envoi en recommandé avec AR, mention des poursuites judiciaires possibles.
 
 - [Freelance : l'aventure dont vous êtes le héros — Alexis Minchella](https://www.amazon.fr/dp/2212576862?tag=lebrunnathali-21) : le guide complet pour lancer et développer son activité freelance
 - [La micro-entreprise pour les nuls — Grégoire Leclercq](https://www.amazon.fr/dp/2412089507?tag=lebrunnathali-21) : tout comprendre de la création à la gestion quotidienne`,
-        cta: { href: "/officielle", text: "⚖️ Générer une lettre de relance" },
+        cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
         slug: "harcelement-travail-recours-demarches",
@@ -1665,7 +1665,7 @@ Pour chaque incident, notez :
 ## Pour vous informer et vous défendre
 
 - [Le harcèlement moral au travail — Marie-France Hirigoyen](https://www.amazon.fr/dp/2130811507?tag=lebrunnathali-21) : l'ouvrage fondateur sur le sujet, par la psychiatre qui a fait reconnaître ce phénomène en France`,
-        cta: { href: "/officielle", text: "⚖️ Générer une lettre de signalement" },
+        cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
         slug: "conge-parental-demande-droits",
@@ -1749,7 +1749,7 @@ Envoyez une lettre recommandée avec AR **au moins 1 mois avant** le début du c
 ## Pour bien préparer cette étape
 
 - [Devenir parent sans perdre la tête — Margot Fried-Filliozat](https://www.amazon.fr/dp/2501174356?tag=lebrunnathali-21) : un guide bienveillant pour gérer la parentalité et la vie professionnelle`,
-        cta: { href: "/officielle", text: "⚖️ Générer ma demande de congé parental" },
+        cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
         slug: "bilan-competences-guide-pratique",
@@ -1831,7 +1831,7 @@ Le bilan débouche souvent sur :
 ## Lecture complémentaire
 
 - [Trouver sa voie — Emilie Wapnick](https://www.amazon.fr/dp/2501172833?tag=lebrunnathali-21) : pour les profils multipotentiels qui ont du mal à choisir une seule voie`,
-        cta: { href: "/motivation", text: "📄 Générer ma lettre de motivation" },
+        cta: { href: "/motivation", text: "📄 Choisir un modèle gratuit" },
     },
     {
         slug: "litige-artisan-recours-modeles",
@@ -1915,7 +1915,7 @@ Si l'artisan ne répond pas :
 ## Pour connaître vos droits
 
 - [Guide des litiges du bâtiment — éditions Eyrolles](https://www.amazon.fr/dp/2212679262?tag=lebrunnathali-21) : la référence pour comprendre les garanties et les recours dans le bâtiment`,
-        cta: { href: "/officielle", text: "⚖️ Générer ma lettre de réclamation" },
+        cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
         slug: "lettre-motivation-reconversion-modeles",
@@ -1991,7 +1991,7 @@ Montrez que vous avez une vision claire de votre nouveau métier et de ce que vo
 ## Pour structurer votre démarche
 
 - [Donner un nouveau souffle à sa carrière — Yves Deloison](https://www.amazon.fr/dp/2212569041?tag=lebrunnathali-21) : méthodologie complète pour réussir sa lettre et sa candidature en reconversion`,
-        cta: { href: "/motivation", text: "📄 Générer ma lettre de reconversion" },
+        cta: { href: "/motivation", text: "📄 Choisir un modèle gratuit" },
     },
     {
         slug: "rupture-conventionnelle-guide-negociation",
@@ -2076,7 +2076,7 @@ En pratique, il est souvent possible de négocier **1 à 3 mois de salaire suppl
 ## Pour bien préparer votre négociation
 
 - [La rupture conventionnelle pour les nuls — poche](https://www.amazon.fr/dp/2412086680?tag=lebrunnathali-21) : le guide indispensable pour comprendre la procédure et maximiser votre indemnité`,
-        cta: { href: "/officielle", text: "⚖️ Générer ma lettre de demande" },
+        cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
         slug: "lettre-motivation-anglais-cover-letter",
@@ -2161,7 +2161,7 @@ Montrez ce que vous apportez, pas ce que vous cherchez :
 
 - [L'anglais professionnel — Judith Ward](https://www.amazon.fr/dp/229015637X?tag=lebrunnathali-21) : vocabulaire et expressions clés pour le monde du travail
 - [English for Business Writing — collectif](https://www.amazon.fr/dp/2340082293?tag=lebrunnathali-21) : rédiger des emails, lettres et rapports en anglais professionnel`,
-        cta: { href: "/motivation", text: "📄 Générer ma lettre de motivation" },
+        cta: { href: "/motivation", text: "📄 Choisir un modèle gratuit" },
     },
     {
         slug: "lettre-excuse-professionnelle-modeles",
@@ -2274,7 +2274,7 @@ Cordialement,
 
 - [L'art de s'excuser — Aaron Lazare](https://www.amazon.fr/s?k=art+excuser+communication+professionnelle&tag=lebrunnathali-21) : comprendre la psychologie de l'excuse pour mieux communiquer
 - [La communication non violente — Marshall Rosenberg](https://www.amazon.fr/s?k=communication+non+violente+rosenberg&tag=lebrunnathali-21) : exprimer ses erreurs avec authenticité`,
-        cta: { href: "/officielle", text: "⚖️ Générer ma lettre officielle" },
+        cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
         slug: "lettre-augmentation-salaire-modeles",
@@ -2370,7 +2370,7 @@ Un refus n'est pas un échec. Demandez :
 
 - [Négocier comme un pro — Alexis Kyprianou](https://www.amazon.fr/s?k=negocier+comme+pro+salaire+livre&tag=lebrunnathali-21) : techniques de négociation appliquées au salaire
 - [Oser demander — Claude Dubar](https://www.amazon.fr/s?k=oser+demander+augmentation+salaire+livre&tag=lebrunnathali-21) : dépasser la peur de demander plus`,
-        cta: { href: "/motivation", text: "📄 Générer ma lettre de motivation" },
+        cta: { href: "/motivation", text: "📄 Choisir un modèle gratuit" },
     },
     {
         slug: "lettre-recours-gracieux-modeles",
@@ -2469,7 +2469,7 @@ Respectueusement,
 
 - [Vos droits face à l'administration — collectif](https://www.amazon.fr/s?k=droits+face+administration+recours+guide&tag=lebrunnathali-21) : comprendre les procédures et défendre vos droits
 - [Guide pratique du contribuable — Francis Lefebvre](https://www.amazon.fr/s?k=guide+pratique+contribuable+impots&tag=lebrunnathali-21) : tout savoir sur les recours fiscaux`,
-        cta: { href: "/officielle", text: "⚖️ Générer ma lettre officielle" },
+        cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
         slug: "rediger-mail-relance-professionnel",
@@ -2575,7 +2575,7 @@ Cordialement,
 - ✅ "Je me permets de revenir vers vous"
 - ✅ "Auriez-vous eu l'occasion de..."
 - ✅ "Je reste à votre disposition"`,
-        cta: { href: "/motivation", text: "📄 Générer ma lettre de motivation" },
+        cta: { href: "/motivation", text: "📄 Choisir un modèle gratuit" },
     },
     {
         slug: "lettre-contestation-licenciement-modeles",
@@ -2671,7 +2671,7 @@ Le barème Macron (article L.1235-3 du Code du travail) fixe les plafonds d'inde
 
 - [Le licenciement — Cédric Pélissier](https://www.amazon.fr/s?k=licenciement+droits+salarie+guide+pratique&tag=lebrunnathali-21) : comprendre vos droits et les recours possibles
 - [Code du travail annoté — Dalloz](https://www.amazon.fr/s?k=code+travail+dalloz+2026&tag=lebrunnathali-21) : la référence pour connaître chaque article`,
-        cta: { href: "/officielle", text: "⚖️ Générer ma lettre officielle" },
+        cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
         slug: "lettre-demande-formation-employeur",
@@ -2770,7 +2770,7 @@ L'employeur accepte plus facilement quand la formation :
 
 - [Se former tout au long de la vie — guide pratique](https://www.amazon.fr/s?k=formation+professionnelle+droits+salarie+guide&tag=lebrunnathali-21) : comprendre tous les dispositifs de formation
 - [Mon CPF — site officiel](https://www.moncompteformation.gouv.fr) : vérifier vos droits et vous inscrire`,
-        cta: { href: "/motivation", text: "📄 Générer ma lettre de motivation" },
+        cta: { href: "/motivation", text: "📄 Choisir un modèle gratuit" },
     },
     {
         slug: "lettre-preavis-logement-modeles",
@@ -2871,7 +2871,7 @@ Consultez la liste officielle sur le site du gouvernement. Les grandes villes et
 ## Pour aller plus loin
 
 - [Le guide du locataire — Francis Lefebvre](https://www.amazon.fr/s?k=guide+locataire+droits+logement&tag=lebrunnathali-21) : tous les droits du locataire, du bail à la sortie`,
-        cta: { href: "/officielle", text: "⚖️ Générer ma lettre officielle" },
+        cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
         slug: "reussir-entretien-annuel-evaluation",
@@ -2963,7 +2963,7 @@ Reprenez chaque objectif fixé lors du dernier entretien :
 
 - [Réussir son entretien annuel — Uriel Megnassan](https://www.amazon.fr/s?k=reussir+entretien+annuel+evaluation+guide&tag=lebrunnathali-21) : préparer, argumenter et obtenir ce que vous méritez
 - [L'art de la négociation — Michael Wheeler](https://www.amazon.fr/s?k=art+negociation+michael+wheeler&tag=lebrunnathali-21) : techniques pour défendre vos intérêts`,
-        cta: { href: "/motivation", text: "📄 Générer ma lettre de motivation" },
+        cta: { href: "/motivation", text: "📄 Choisir un modèle gratuit" },
     },
     {
         slug: "travailler-etranger-demarches-lettres",
@@ -3079,7 +3079,7 @@ Cordialement,
 
 - [S'expatrier — mode d'emploi](https://www.amazon.fr/s?k=expatriation+guide+pratique+travailler+etranger&tag=lebrunnathali-21) : toutes les démarches pour réussir son expatriation
 - [Vivre et travailler à l'étranger — Lonely Planet](https://www.amazon.fr/s?k=vivre+travailler+etranger+guide&tag=lebrunnathali-21) : conseils pratiques pour s'installer sereinement`,
-        cta: { href: "/officielle", text: "⚖️ Générer ma lettre officielle" },
+        cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
         slug: "droits-stagiaire-convention-guide",
@@ -3189,6 +3189,6 @@ Cordialement,
 
 - [Réussir son stage — guide étudiant](https://www.amazon.fr/s?k=reussir+stage+entreprise+guide+etudiant&tag=lebrunnathali-21) : tirer le maximum de votre expérience
 - [Les droits des étudiants — collectif](https://www.amazon.fr/s?k=droits+etudiants+stages+guide+juridique&tag=lebrunnathali-21) : le cadre légal expliqué simplement`,
-        cta: { href: "/motivation", text: "📄 Générer ma lettre de motivation" },
+        cta: { href: "/motivation", text: "📄 Choisir un modèle gratuit" },
     },
 ];

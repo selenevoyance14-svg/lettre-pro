@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { blogArticles } from "../blogData";
 
@@ -131,12 +132,35 @@ function formatInline(text: string): string {
         .replace(/\*(.+?)\*/g, '<em class="text-gray-500 italic">$1</em>');
 }
 
+function frenchDateToIso(date: string): string {
+    const months: Record<string, string> = {
+        janvier: "01", février: "02", mars: "03", avril: "04", mai: "05", juin: "06",
+        juillet: "07", août: "08", septembre: "09", octobre: "10", novembre: "11", décembre: "12",
+    };
+    const [day, month, year] = date.toLowerCase().split(" ");
+    return `${year}-${months[month]}-${day.padStart(2, "0")}`;
+}
+
 export default function BlogArticlePage({ params }: Props) {
     const article = blogArticles.find((a) => a.slug === params.slug);
     if (!article) notFound();
 
+    const articleSchema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: article.title,
+        description: article.description,
+        datePublished: frenchDateToIso(article.date),
+        dateModified: frenchDateToIso(article.date),
+        inLanguage: "fr-FR",
+        mainEntityOfPage: `https://lettre-pro.fr/blog/${article.slug}`,
+        author: { "@type": "Person", name: "Nathalie Lebrun", url: "https://lettre-pro.fr/a-propos" },
+        publisher: { "@type": "Organization", name: "Lettre Pro", url: "https://lettre-pro.fr" },
+    };
+
     return (
         <>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             {/* HEADER */}
             <section className="bg-gradient-to-br from-pro-950 to-pro-800 text-white py-14 sm:py-20">
                 <div className="max-w-3xl mx-auto px-4 text-center">
@@ -163,6 +187,17 @@ export default function BlogArticlePage({ params }: Props) {
                     <article className="space-y-1">
                         {renderMarkdown(article.content)}
                     </article>
+
+                    <aside className="mt-10 rounded-xl border border-gray-200 bg-gray-50 p-5 text-sm leading-relaxed text-gray-600">
+                        <strong className="block text-gray-900">Rédaction et vérification</strong>
+                        <p className="mt-2">
+                            Article rédigé et relu par <Link href="/a-propos" className="font-semibold text-pro-700 underline underline-offset-2">Nathalie Lebrun</Link>. Les informations générales sont vérifiées à la date indiquée ci-dessus. Pour une démarche sensible, contrôlez toujours les règles applicables sur le site officiel concerné ou auprès d’un professionnel.
+                        </p>
+                        <p className="mt-3">
+                            Sources de référence : <a href="https://www.service-public.fr" target="_blank" rel="noopener noreferrer" className="font-semibold text-pro-700 underline underline-offset-2">Service-Public.fr</a>,{" "}
+                            <a href="https://www.legifrance.gouv.fr" target="_blank" rel="noopener noreferrer" className="font-semibold text-pro-700 underline underline-offset-2">Légifrance</a> et les organismes officiels cités dans le guide.
+                        </p>
+                    </aside>
 
                     {article.content.includes("amazon.fr") && (
                         <aside className="mt-10 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-relaxed text-amber-950">
