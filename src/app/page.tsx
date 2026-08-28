@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { blogArticles } from "./blog/blogData";
 import { letterTemplates } from "./modeles/lettersData";
+import MerciFacteurCta from "./components/MerciFacteurCta";
 
 export const metadata: Metadata = {
     title: "Modèles de lettres gratuits à copier | Lettre Pro",
@@ -69,6 +70,10 @@ export default function Home() {
                         <div className="lp-signature">Votre signature</div>
                     </div>
                 </div>
+            </section>
+
+            <section className="lp-shell lp-post-section">
+                <MerciFacteurCta />
             </section>
 
             <section className="lp-section lp-section-alt">

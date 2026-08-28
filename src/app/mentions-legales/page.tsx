@@ -48,6 +48,14 @@ export default function MentionsLegalesPage() {
                         Le prix, la disponibilité, la livraison et le service après-vente relèvent d&apos;Amazon et du vendeur concerné.
                     </p>
                 </section>
+                <section>
+                    <h2 className="font-semibold text-gray-900 text-base mb-2">Partenariat Merci Facteur</h2>
+                    <p>
+                        Les liens d&apos;envoi de courrier vers Merci Facteur sont affiliés. Une commande réalisée
+                        après un clic peut générer une commission pour Lettre Pro. Merci Facteur est un service
+                        tiers payant, responsable de ses tarifs, de ses conditions et de l&apos;exécution de la prestation.
+                    </p>
+                </section>
             </div>
         </div>
     );

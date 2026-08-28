@@ -4,7 +4,7 @@ import { letterTemplates } from "./modeles/lettersData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const base = "https://lettre-pro.fr";
-    const pages = ["", "/modeles", "/motivation", "/officielle", "/blog", "/mentions-legales", "/affiliation-amazon", "/confidentialite", "/cgv"];
+    const pages = ["", "/modeles", "/motivation", "/officielle", "/blog", "/mentions-legales", "/affiliation", "/affiliation-amazon", "/confidentialite", "/cgv"];
     const staticPages = pages.map((path) => ({
         url: `${base}${path}`,
         lastModified: new Date("2026-07-30"),

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getLettersByCategory } from "../modeles/lettersData";
+import MerciFacteurCta from "../components/MerciFacteurCta";
 
 export const metadata: Metadata = {
     title: "Modèles de lettres officielles gratuits",
@@ -184,6 +185,10 @@ export default function OfficiellePage() {
                         ))}
                     </div>
                 </div>
+            </section>
+
+            <section className="max-w-4xl mx-auto px-4 sm:px-6 pt-10">
+                <MerciFacteurCta compact />
             </section>
 
             {/* MODELES */}

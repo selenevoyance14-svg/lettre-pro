@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { MERCI_FACTEUR_RECOMMANDE } from "./components/MerciFacteurCta";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -40,7 +41,9 @@ function Header() {
                     <Link href="/officielle">Lettres officielles</Link>
                     <Link href="/blog">Conseils</Link>
                 </nav>
-                <Link href="/modeles" className="lp-nav-cta">Trouver ma lettre <span>→</span></Link>
+                <a href={MERCI_FACTEUR_RECOMMANDE} target="_blank" rel="sponsored noopener noreferrer" className="lp-nav-cta">
+                    Envoyer ma lettre <span>↗</span>
+                </a>
             </div>
         </header>
     );
@@ -66,7 +69,7 @@ function Footer() {
                 <div>
                     <strong>Informations</strong>
                     <Link href="/mentions-legales">Mentions légales</Link>
-                    <Link href="/affiliation-amazon">Affiliation Amazon</Link>
+                    <Link href="/affiliation">Affiliation et partenaires</Link>
                     <Link href="/confidentialite">Confidentialité</Link>
                     <a href="mailto:bonsplansmania@gmail.com">Contact</a>
                 </div>
@@ -77,7 +80,7 @@ function Footer() {
             </div>
             <div className="lp-shell lp-copyright">
                 <span>© 2026 Lettre Pro</span>
-                <span>En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.</span>
+                <span>Certains liens partenaires peuvent rémunérer Lettre Pro, sans surcoût ajouté par notre site.</span>
             </div>
         </footer>
     );

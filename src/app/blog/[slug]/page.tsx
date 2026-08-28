@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import MerciFacteurCta from "@/app/components/MerciFacteurCta";
 import { blogArticles } from "../blogData";
 
 interface Props {
@@ -189,6 +190,10 @@ export default function BlogArticlePage({ params }: Props) {
                         <a href={article.cta.href} className="btn-accent text-base">
                             {article.cta.text}
                         </a>
+                    </div>
+
+                    <div className="mt-8">
+                        <MerciFacteurCta compact />
                     </div>
 
                     {/* Navigation retour */}
