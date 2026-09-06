@@ -45,10 +45,10 @@ export default function Home() {
                 <div className="lp-shell lp-hero-grid">
                     <div className="lp-hero-copy">
                         <span className="lp-eyebrow">Modèles gratuits · sans inscription</span>
-                        <h1>Les bons mots,<br /><em>au bon moment.</em></h1>
+                        <h1>Modèles de lettres gratuits, <em>prêts à personnaliser.</em></h1>
                         <p>
-                            Une candidature à envoyer, un contrat à résilier ou une décision à contester ?
-                            Partez d’un modèle clair, adaptez les champs et gardez la maîtrise de votre courrier.
+                            Lettre de motivation, résiliation, réclamation ou mise en demeure : choisissez un modèle clair,
+                            adaptez les champs entre crochets et copiez-le gratuitement, sans inscription.
                         </p>
                         <div className="lp-actions">
                             <Link className="lp-button lp-button-primary" href="/modeles">Trouver mon modèle <span>→</span></Link>

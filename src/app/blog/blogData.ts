@@ -3,6 +3,7 @@ export interface BlogArticle {
     title: string;
     description: string;
     date: string;
+    updatedAt?: string;
     icon: string;
     tag: string;
     tagColor: string;
@@ -17,13 +18,14 @@ export const blogArticles: BlogArticle[] = [
         title: "Comment rédiger une lettre de motivation qui se démarque",
         description: "Découvrez les techniques concrètes pour capter l'attention des recruteurs dès les premières lignes et décrocher un entretien.",
         date: "12 mars 2026",
+        updatedAt: "6 septembre 2026",
         icon: "✍️",
         tag: "Motivation",
         tagColor: "bg-blue-100 text-blue-700",
         readTime: "5 min",
         content: `## Pourquoi votre lettre de motivation est décisive
 
-Un recruteur passe en moyenne **30 secondes** sur une lettre de motivation. Dans ce laps de temps, il décide si votre candidature mérite un second regard ou finit à la corbeille. Voici comment faire partie de ceux qui retiennent l'attention.
+Une première lecture est souvent rapide : l’objectif est donc de rendre immédiatement visibles le poste visé, votre valeur ajoutée et votre intérêt pour l’entreprise. Voici comment retenir l’attention sans surcharger la lettre.
 
 ## L'accroche : votre arme secrète
 
@@ -63,13 +65,14 @@ Ne répétez jamais votre CV dans votre lettre. La lettre de motivation complèt
         title: "Les 5 erreurs fatales dans une lettre de motivation",
         description: "Ces erreurs courantes éliminent votre candidature avant même qu'un recruteur lise votre CV. Apprenez à les éviter.",
         date: "10 mars 2026",
+        updatedAt: "6 septembre 2026",
         icon: "⚠️",
         tag: "Conseils",
         tagColor: "bg-red-100 text-red-700",
         readTime: "4 min",
         content: `## Des erreurs plus fréquentes qu'on ne le croit
 
-Même les candidats expérimentés commettent ces erreurs. Selon une étude Robert Half, **76 % des recruteurs** écartent une candidature à cause de la lettre de motivation. Voici les 5 pièges les plus courants.
+Même les candidats expérimentés commettent ces erreurs. Une lettre générique, imprécise ou négligée peut affaiblir une candidature pourtant solide. Voici les 5 pièges les plus courants.
 
 ## Erreur n°1 : La lettre générique
 
@@ -123,6 +126,7 @@ Ne laissez pas ces erreurs saboter vos chances. Une lettre soignée peut compens
         title: "Lettre de résiliation : vos droits et modèles",
         description: "Résiliez vos contrats en toute légalité grâce à nos modèles gratuits et nos explications sur vos droits (loi Chatel, loi Hamon).",
         date: "8 mars 2026",
+        updatedAt: "6 septembre 2026",
         icon: "📋",
         tag: "Officielle",
         tagColor: "bg-green-100 text-green-700",
@@ -133,10 +137,10 @@ La législation française protège les consommateurs avec plusieurs dispositifs
 
 ## La loi Chatel (2005)
 
-Cette loi oblige les professionnels à vous **prévenir entre 3 mois et 1 mois** avant la date de reconduction automatique de votre contrat. Si l'entreprise ne respecte pas ce délai, vous pouvez résilier à tout moment sans frais.
+Pour les contrats de prestations de services à tacite reconduction concernés, le professionnel doit rappeler au consommateur la possibilité de ne pas reconduire le contrat, dans les conditions et délais prévus par le Code de la consommation. En cas d’information tardive ou absente, un droit de résiliation peut s’appliquer. Vérifiez toujours le type de contrat et l’avis reçu sur [Service-Public.fr](https://www.service-public.fr/particuliers/vosdroits/F33991).
 
-- **Concerne** : assurances, abonnements téléphoniques, salles de sport, magazines
-- **Délai** : résiliation possible dans les 20 jours suivant la date d'envoi du rappel
+- **Concerne** : certains contrats de services à tacite reconduction ; les assurances suivent aussi des règles particulières
+- **Délai** : reportez-vous à l’avis d’échéance et au régime applicable à votre contrat
 
 ## La loi Hamon (2014)
 
@@ -144,7 +148,7 @@ Elle permet de **résilier à tout moment après 1 an** d'engagement pour certai
 
 - Assurance auto et moto
 - Assurance habitation
-- Assurance emprunteur (affinitaire)
+- Certaines assurances affinitaires
 
 **Le plus** : c'est votre nouvel assureur qui s'occupe des démarches de résiliation.
 
@@ -164,7 +168,7 @@ Depuis 2023, vous pouvez résilier **en 3 clics** en ligne pour de nombreux cont
 
 ### Les bonnes pratiques
 
-- **Envoyez en recommandé avec AR** : c'est la seule preuve juridiquement valable
+- **Choisissez un envoi traçable** : le recommandé avec avis de réception permet généralement d’établir la date d’envoi et de réception, mais d’autres modalités peuvent être prévues par le contrat ou la loi
 - **Conservez une copie** de votre lettre et de l'accusé de réception
 - **Respectez le préavis** indiqué dans vos conditions générales
 - **Demandez le remboursement** du trop-perçu si applicable
@@ -179,7 +183,7 @@ Si l'entreprise refuse votre résiliation alors que vous êtes dans votre droit 
 
 1. Renvoyez votre demande en recommandé avec AR en citant la loi précise
 2. Contactez le **médiateur** du secteur concerné
-3. En dernier recours, saisissez la **DGCCRF** ou le tribunal d'instance`,
+3. Signalez le problème sur **SignalConso** ou saisissez la juridiction compétente si le litige persiste`,
         cta: { href: "/officielle", text: "⚖️ Choisir un modèle gratuit" },
     },
     {
@@ -187,6 +191,7 @@ Si l'entreprise refuse votre résiliation alors que vous êtes dans votre droit 
         title: "Comment contester une amende : guide complet",
         description: "Radar, stationnement, excès de vitesse : découvrez les procédures et modèles pour contester une amende efficacement.",
         date: "5 mars 2026",
+        updatedAt: "6 septembre 2026",
         icon: "🚗",
         tag: "Officielle",
         tagColor: "bg-green-100 text-green-700",
@@ -218,15 +223,15 @@ Oui, contester une amende est un **droit fondamental**. Chaque année, des milli
 2. **Consignez le montant** — Déposez une consignation (pas un paiement) si l'amende est forfaitaire.
 3. **Rédigez une requête en exonération** — Adressée à l'Officier du Ministère Public (OMP).
 4. **Joignez les preuves** — Photos, témoignages, certificat de vente, attestation médicale.
-5. **Envoyez en recommandé avec AR** dans le délai de **45 jours**.
+5. **Suivez la procédure indiquée sur l’avis**, en ligne sur le site de l’ANTAI ou par courrier, dans le délai applicable.
 
 ## Les délais à respecter
 
 | Type d'amende | Délai de contestation |
 |---|---|
-| Amende forfaitaire | 45 jours |
-| Amende majorée | 30 jours |
-| Amende PV électronique | 45 jours |
+| Avis de contravention | En général 45 jours |
+| Amende forfaitaire majorée | En général 30 jours ; des exceptions existent |
+| Démarche en ligne | Vérifier la date limite indiquée sur l’avis |
 
 ## Les pièces à joindre
 
@@ -1148,13 +1153,14 @@ Un bon espace de travail à domicile améliore la productivité et préserve vot
         title: "Relancer une candidature : quand et comment",
         description: "Pas de réponse après votre candidature ? Voici comment relancer sans paraître insistant et maximiser vos chances.",
         date: "28 février 2026",
+        updatedAt: "6 septembre 2026",
         icon: "🔁",
         tag: "Motivation",
         tagColor: "bg-blue-100 text-blue-700",
         readTime: "4 min",
         content: `## La relance est normale et attendue
 
-Ne pas relancer est une erreur. **85 % des recruteurs** considèrent qu'une relance bien faite montre de la motivation. Le silence après une candidature ne signifie pas un refus, il signifie souvent que le processus prend du temps.
+Une relance courtoise peut confirmer votre intérêt et remettre votre candidature en visibilité. Le silence après une candidature ne signifie pas toujours un refus : le processus peut simplement prendre du temps.
 
 ## Quand relancer ?
 
@@ -2377,6 +2383,7 @@ Un refus n'est pas un échec. Demandez :
         title: "Lettre de recours gracieux : modèles et guide complet",
         description: "Comment rédiger un recours gracieux efficace ? Modèles pour impôts, amende, CAF, Pôle emploi. Vos droits et la procédure expliqués.",
         date: "16 avril 2026",
+        updatedAt: "6 septembre 2026",
         icon: "⚖️",
         tag: "Juridique",
         tagColor: "bg-yellow-100 text-yellow-700",
@@ -2396,7 +2403,7 @@ Le recours gracieux est une demande adressée à l'administration qui a pris une
 ## Les règles à respecter
 
 1. **Délai** : vous avez en général **2 mois** à compter de la notification de la décision
-2. **Forme** : lettre recommandée avec accusé de réception (obligatoire)
+2. **Forme** : utilisez le canal indiqué dans la décision ; un recommandé avec avis de réception est souvent utile pour conserver une preuve datée
 3. **Contenu** : exposé clair des faits, motifs du recours, pièces justificatives
 4. **Réponse** : l'administration a **2 mois** pour répondre. Sans réponse = rejet implicite
 
@@ -2777,6 +2784,7 @@ L'employeur accepte plus facilement quand la formation :
         title: "Lettre de préavis de logement : modèles et délais 2026",
         description: "Comment donner son préavis de logement ? Modèles de lettres pour préavis 1 mois et 3 mois. Conditions pour réduire le délai.",
         date: "16 avril 2026",
+        updatedAt: "6 septembre 2026",
         icon: "🏠",
         tag: "Officielle",
         tagColor: "bg-green-100 text-green-700",
@@ -2798,7 +2806,7 @@ Le délai de préavis dépend du type de logement et de votre situation :
 
 ## Les règles à respecter
 
-1. **Lettre recommandée avec AR** obligatoire (ou remise en main propre contre signature)
+1. **Notification du congé** par lettre recommandée avec avis de réception, acte de commissaire de justice ou remise en main propre contre récépissé ou émargement
 2. **Le préavis court dès réception** de la lettre par le propriétaire
 3. **Le loyer est dû** pendant toute la durée du préavis (même si vous partez avant)
 4. **Le logement doit être accessible** pour les visites de candidats

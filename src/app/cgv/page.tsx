@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Conditions d’utilisation",
+    description: "Consultez les conditions d’utilisation des modèles de lettres et guides gratuits publiés sur Lettre Pro.",
     alternates: { canonical: "/cgv" },
 };
 

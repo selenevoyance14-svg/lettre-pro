@@ -33,7 +33,7 @@ export default function ModelesPage() {
                 <div className="lp-shell grid items-end gap-10 lg:grid-cols-[1fr_auto]">
                     <div>
                         <span className="lp-eyebrow">Bibliothèque gratuite · sans compte</span>
-                        <h1 className="!max-w-4xl">Le bon modèle pour <em>passer à l’action.</em></h1>
+                        <h1 className="!max-w-4xl">Tous nos modèles de lettres <em>gratuits.</em></h1>
                         <p className="max-w-2xl text-lg leading-relaxed text-gray-500">
                             Choisissez votre situation, personnalisez les passages entre crochets, puis copiez, téléchargez ou imprimez votre lettre.
                         </p>

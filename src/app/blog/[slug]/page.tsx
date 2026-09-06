@@ -2,9 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { blogArticles } from "../blogData";
+import { letterTemplates } from "../../modeles/lettersData";
 
 interface Props {
     params: { slug: string };
+}
+
+function compactTitle(title: string): string {
+    if (title.length <= 62) return title;
+    const beforeSeparator = title.split(/\s[:—]\s|:/)[0].trim();
+    if (beforeSeparator.length >= 30 && beforeSeparator.length <= 62) return beforeSeparator;
+    const shortened = title.replace(/^Comment\s+/i, "").slice(0, 61);
+    const lastSpace = shortened.lastIndexOf(" ");
+    return `${shortened.slice(0, lastSpace > 42 ? lastSpace : 58).trim()}…`;
 }
 
 export async function generateStaticParams() {
@@ -14,8 +24,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const article = blogArticles.find((a) => a.slug === params.slug);
     if (!article) return {};
+    const brandedTitle = `${article.title} | Lettre Pro`;
     return {
-        title: article.title,
+        title: { absolute: brandedTitle.length <= 68 ? brandedTitle : compactTitle(article.title) },
         description: article.description,
         alternates: { canonical: `/blog/${article.slug}` },
         openGraph: {
@@ -24,6 +35,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             type: "article",
             locale: "fr_FR",
             url: `https://lettre-pro.fr/blog/${article.slug}`,
+            images: [{ url: "/og.png", width: 1200, height: 630, alt: article.title }],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: article.title,
+            description: article.description,
+            images: ["/og.png"],
         },
     };
 }
@@ -141,21 +159,69 @@ function frenchDateToIso(date: string): string {
     return `${year}-${months[month]}-${day.padStart(2, "0")}`;
 }
 
+function normalizeWords(value: string): string[] {
+    return value
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .split(/[^a-z0-9]+/)
+        .filter((word) => word.length > 4 && !["lettre", "modele", "modeles", "guide", "gratuit"].includes(word));
+}
+
+function getRelatedModels(title: string, slug: string, ctaHref: string) {
+    const articleWords = new Set([...normalizeWords(title), ...normalizeWords(slug)]);
+    const preferredCategory = ctaHref === "/motivation" ? "motivation" : ctaHref === "/officielle" ? "officielle" : undefined;
+    const ranked = letterTemplates
+        .map((template) => {
+            const words = normalizeWords(`${template.title} ${template.slug} ${template.tag}`);
+            const score = words.reduce((total, word) => total + (articleWords.has(word) ? 1 : 0), 0);
+            return { template, score: score + (preferredCategory === template.category ? 0.25 : 0) };
+        })
+        .sort((a, b) => b.score - a.score || a.template.title.localeCompare(b.template.title, "fr"));
+    return ranked.slice(0, 3).map(({ template }) => template);
+}
+
+function getOfficialSources(slug: string) {
+    const sources = [{ label: "Service-Public.fr", href: "https://www.service-public.fr/" }];
+    if (/amende|pv|contestation/.test(slug)) sources.push({ label: "ANTAI", href: "https://www.antai.gouv.fr/" });
+    if (/travail|emploi|licenciement|demission|salaire|formation|harcelement|conge/.test(slug)) sources.push({ label: "Code du travail numérique", href: "https://code.travail.gouv.fr/" });
+    if (/droit|recours|demeure|litige|reclamation|resiliation|facture|logement|proprietaire|preavis/.test(slug)) sources.push({ label: "Légifrance", href: "https://www.legifrance.gouv.fr/" });
+    return sources;
+}
+
 export default function BlogArticlePage({ params }: Props) {
     const article = blogArticles.find((a) => a.slug === params.slug);
     if (!article) notFound();
 
+    const relatedModels = getRelatedModels(article.title, article.slug, article.cta.href);
+    const relatedArticles = blogArticles.filter((item) => item.slug !== article.slug && item.tag === article.tag).slice(0, 3);
+    const officialSources = getOfficialSources(article.slug);
+
     const articleSchema = {
         "@context": "https://schema.org",
-        "@type": "Article",
-        headline: article.title,
-        description: article.description,
-        datePublished: frenchDateToIso(article.date),
-        dateModified: frenchDateToIso(article.date),
-        inLanguage: "fr-FR",
-        mainEntityOfPage: `https://lettre-pro.fr/blog/${article.slug}`,
-        author: { "@type": "Person", name: "Nathalie Lebrun", url: "https://lettre-pro.fr/a-propos" },
-        publisher: { "@type": "Organization", name: "Lettre Pro", url: "https://lettre-pro.fr" },
+        "@graph": [
+            {
+                "@type": "BlogPosting",
+                "@id": `https://lettre-pro.fr/blog/${article.slug}#article`,
+                headline: article.title,
+                description: article.description,
+                image: "https://lettre-pro.fr/og.png",
+                datePublished: frenchDateToIso(article.date),
+                dateModified: frenchDateToIso(article.updatedAt ?? article.date),
+                inLanguage: "fr-FR",
+                mainEntityOfPage: { "@id": `https://lettre-pro.fr/blog/${article.slug}` },
+                author: { "@id": "https://lettre-pro.fr/a-propos#nathalie-lebrun" },
+                publisher: { "@id": "https://lettre-pro.fr/#organization" },
+            },
+            {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                    { "@type": "ListItem", position: 1, name: "Accueil", item: "https://lettre-pro.fr/" },
+                    { "@type": "ListItem", position: 2, name: "Guides", item: "https://lettre-pro.fr/blog" },
+                    { "@type": "ListItem", position: 3, name: article.title, item: `https://lettre-pro.fr/blog/${article.slug}` },
+                ],
+            },
+        ],
     };
 
     return (
@@ -174,10 +240,11 @@ export default function BlogArticlePage({ params }: Props) {
                         {article.title}
                     </h1>
                     <div className="flex items-center justify-center gap-4 text-sm text-pro-300">
-                        <span>{article.date}</span>
+                        <span>Publié le {article.date}</span>
                         <span>·</span>
                         <span>📖 {article.readTime} de lecture</span>
                     </div>
+                    {article.updatedAt && <p className="mt-3 text-center text-xs text-pro-200">Vérifié et mis à jour le {article.updatedAt}</p>}
                 </div>
             </section>
 
@@ -193,11 +260,35 @@ export default function BlogArticlePage({ params }: Props) {
                         <p className="mt-2">
                             Article rédigé et relu par <Link href="/a-propos" className="font-semibold text-pro-700 underline underline-offset-2">Nathalie Lebrun</Link>. Les informations générales sont vérifiées à la date indiquée ci-dessus. Pour une démarche sensible, contrôlez toujours les règles applicables sur le site officiel concerné ou auprès d’un professionnel.
                         </p>
-                        <p className="mt-3">
-                            Sources de référence : <a href="https://www.service-public.fr" target="_blank" rel="noopener noreferrer" className="font-semibold text-pro-700 underline underline-offset-2">Service-Public.fr</a>,{" "}
-                            <a href="https://www.legifrance.gouv.fr" target="_blank" rel="noopener noreferrer" className="font-semibold text-pro-700 underline underline-offset-2">Légifrance</a> et les organismes officiels cités dans le guide.
-                        </p>
+                        <p className="mt-3">Sources officielles à consulter pour vérifier les règles applicables :</p>
+                        <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-2">
+                            {officialSources.map((source) => (
+                                <li key={source.href}><a href={source.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-pro-700 underline underline-offset-2">{source.label}</a></li>
+                            ))}
+                        </ul>
                     </aside>
+
+                    <section className="mt-12" aria-labelledby="modeles-associes">
+                        <h2 id="modeles-associes" className="font-heading text-2xl font-bold text-gray-900">Modèles de lettres associés</h2>
+                        <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                            {relatedModels.map((template) => (
+                                <Link key={template.slug} href={`/modeles/${template.slug}`} className="rounded-xl border border-gray-200 bg-white p-4 text-sm font-semibold text-pro-700 hover:border-pro-300">
+                                    {template.shortTitle} →
+                                </Link>
+                            ))}
+                        </div>
+                    </section>
+
+                    {relatedArticles.length > 0 && (
+                        <section className="mt-12" aria-labelledby="guides-associes">
+                            <h2 id="guides-associes" className="font-heading text-2xl font-bold text-gray-900">Guides complémentaires</h2>
+                            <ul className="mt-4 space-y-3">
+                                {relatedArticles.map((item) => (
+                                    <li key={item.slug}><Link href={`/blog/${item.slug}`} className="font-semibold text-pro-700 underline decoration-pro-200 underline-offset-4">{item.title}</Link></li>
+                                ))}
+                            </ul>
+                        </section>
+                    )}
 
                     {article.content.includes("amazon.fr") && (
                         <aside className="mt-10 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-relaxed text-amber-950">

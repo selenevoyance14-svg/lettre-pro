@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Mentions légales",
+    description: "Mentions légales, éditeur, hébergeur et informations de contact du site Lettre Pro.",
     alternates: { canonical: "/mentions-legales" },
 };
 

@@ -6,6 +6,20 @@ import { getLetterTemplate, letterTemplates } from "../lettersData";
 
 interface Props { params: { slug: string } }
 
+function frenchDateToIso(date: string): string {
+    const months: Record<string, string> = {
+        janvier: "01", février: "02", mars: "03", avril: "04", mai: "05", juin: "06",
+        juillet: "07", août: "08", septembre: "09", octobre: "10", novembre: "11", décembre: "12",
+    };
+    const [day, month, year] = date.toLowerCase().split(" ");
+    return `${year}-${months[month]}-${day.padStart(2, "0")}`;
+}
+
+function getDocumentTitle(title: string): string {
+    const brandedTitle = `${title} | Lettre Pro`;
+    return brandedTitle.length <= 68 ? brandedTitle : title;
+}
+
 export function generateStaticParams() {
     return letterTemplates.map((template) => ({ slug: template.slug }));
 }
@@ -14,7 +28,7 @@ export function generateMetadata({ params }: Props): Metadata {
     const template = getLetterTemplate(params.slug);
     if (!template) return {};
     return {
-        title: template.title,
+        title: { absolute: getDocumentTitle(template.title) },
         description: template.description,
         alternates: { canonical: `/modeles/${template.slug}` },
         openGraph: {
@@ -23,6 +37,13 @@ export function generateMetadata({ params }: Props): Metadata {
             url: `https://lettre-pro.fr/modeles/${template.slug}`,
             type: "article",
             locale: "fr_FR",
+            images: [{ url: "/og.png", width: 1200, height: 630, alt: template.title }],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: template.title,
+            description: template.description,
+            images: ["/og.png"],
         },
     };
 }
@@ -38,15 +59,27 @@ export default function LetterTemplatePage({ params }: Props) {
 
     const schema = {
         "@context": "https://schema.org",
-        "@type": "HowTo",
-        name: template.title,
-        description: template.description,
-        inLanguage: "fr-FR",
-        dateModified: "2026-08-16",
-        step: [
-            { "@type": "HowToStep", name: "Personnaliser", text: "Remplacez les passages entre crochets par vos informations." },
-            { "@type": "HowToStep", name: "Vérifier", text: "Relisez les faits, dates, références et coordonnées." },
-            { "@type": "HowToStep", name: "Envoyer", text: "Copiez, téléchargez ou imprimez la lettre puis choisissez le mode d’envoi adapté." },
+        "@graph": [
+            {
+                "@type": ["WebPage", "CreativeWork"],
+                "@id": `https://lettre-pro.fr/modeles/${template.slug}`,
+                url: `https://lettre-pro.fr/modeles/${template.slug}`,
+                name: template.title,
+                description: template.description,
+                inLanguage: "fr-FR",
+                isAccessibleForFree: true,
+                dateModified: frenchDateToIso(template.updatedAt),
+                author: { "@id": "https://lettre-pro.fr/a-propos#nathalie-lebrun" },
+                publisher: { "@id": "https://lettre-pro.fr/#organization" },
+            },
+            {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                    { "@type": "ListItem", position: 1, name: "Accueil", item: "https://lettre-pro.fr/" },
+                    { "@type": "ListItem", position: 2, name: "Modèles de lettres", item: "https://lettre-pro.fr/modeles" },
+                    { "@type": "ListItem", position: 3, name: template.shortTitle, item: `https://lettre-pro.fr/modeles/${template.slug}` },
+                ],
+            },
         ],
     };
 

@@ -14,14 +14,14 @@ export default function MerciPage() {
                     Merci d&apos;utiliser Lettre Pro !
                 </h1>
                 <p className="text-gray-500 text-sm mb-8">
-                    Nos services sont 100% gratuits. N&apos;hesitez pas a revenir quand vous avez besoin d&apos;une nouvelle lettre.
+                    Nos services sont 100 % gratuits. N&apos;hésitez pas à revenir lorsque vous avez besoin d&apos;une nouvelle lettre.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                     <a href="/" className="btn-primary">
-                        Retour a l&apos;accueil
+                        Retour à l&apos;accueil
                     </a>
                     <a href="/modeles" className="btn-secondary">
-                        Voir les modeles gratuits
+                        Voir les modèles gratuits
                     </a>
                 </div>
             </div>

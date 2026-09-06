@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -9,7 +10,22 @@ export const metadata: Metadata = {
         template: "%s | Lettre Pro",
     },
     description: "Modèles gratuits de lettres de motivation, résiliation, réclamation, recours et mise en demeure. Copiez, personnalisez et envoyez.",
-    keywords: ["modèle de lettre gratuit", "lettre de motivation", "lettre de résiliation", "lettre de réclamation", "mise en demeure"],
+    applicationName: "Lettre Pro",
+    authors: [{ name: "Nathalie Lebrun", url: "/a-propos" }],
+    creator: "Nathalie Lebrun",
+    publisher: "Lettre Pro",
+    category: "Modèles de lettres",
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+            "max-video-preview": -1,
+        },
+    },
     openGraph: {
         title: "Lettre Pro — Les bons mots, au bon moment",
         description: "Des modèles de lettres gratuits, clairs et immédiatement utilisables.",
@@ -70,7 +86,7 @@ function Footer() {
                     <Link href="/cgv">Conditions d’utilisation</Link>
                     <Link href="/affiliation-amazon">Affiliation Amazon</Link>
                     <Link href="/confidentialite">Confidentialité</Link>
-                    <a href="mailto:contact@lettre-pro.fr">Contact</a>
+                    <Link href="/contact">Contact</Link>
                 </div>
                 <div className="lp-footer-note">
                     <strong>À savoir</strong>
@@ -86,13 +102,52 @@ function Footer() {
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+    const organizationSchema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://lettre-pro.fr/#organization",
+                name: "Lettre Pro",
+                url: "https://lettre-pro.fr/",
+                logo: {
+                    "@type": "ImageObject",
+                    url: "https://lettre-pro.fr/og.png",
+                    width: 1200,
+                    height: 630,
+                },
+                email: "contact@lettre-pro.fr",
+                founder: { "@id": "https://lettre-pro.fr/a-propos#nathalie-lebrun" },
+            },
+            {
+                "@type": "Person",
+                "@id": "https://lettre-pro.fr/a-propos#nathalie-lebrun",
+                name: "Nathalie Lebrun",
+                url: "https://lettre-pro.fr/a-propos",
+                jobTitle: "Éditrice et directrice de la publication",
+                worksFor: { "@id": "https://lettre-pro.fr/#organization" },
+            },
+        ],
+    };
+
     return (
         <html lang="fr">
             <head>
                 <meta name="google-adsense-account" content="ca-pub-5064203547863113" />
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5064203547863113" crossOrigin="anonymous" />
             </head>
-            <body><Header /><main>{children}</main><Footer /></body>
+            <body>
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+                <Header />
+                <main>{children}</main>
+                <Footer />
+                <Script
+                    id="adsense-script"
+                    async
+                    strategy="afterInteractive"
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5064203547863113"
+                    crossOrigin="anonymous"
+                />
+            </body>
         </html>
     );
 }
