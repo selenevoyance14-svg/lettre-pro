@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 };
 
 const popularSlugs = [
-    "lettre-demission-cdi",
-    "lettre-preavis-logement-1-mois",
-    "lettre-resiliation-assurance-habitation",
-    "lettre-motivation-candidature-spontanee",
+    "attestation-hebergement",
+    "demande-quittance-loyer",
+    "reclamation-produit-defectueux",
+    "relance-candidature",
 ];
 
 const collections = [

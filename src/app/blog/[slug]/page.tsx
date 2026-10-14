@@ -22,6 +22,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             title: article.title,
             description: article.description,
             type: "article",
+            publishedTime: article.publishedAt,
+            modifiedTime: article.updatedAt || article.publishedAt,
             locale: "fr_FR",
             url: `https://lettre-pro.fr/blog/${article.slug}`,
         },

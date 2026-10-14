@@ -23,9 +23,11 @@ export default function LetterEditor({ initialContent, title }: { initialContent
     }
 
     function printLetter() {
-        const popup = window.open("", "_blank", "noopener,noreferrer");
+        const popup = window.open("", "_blank");
         if (!popup) return;
-        popup.document.write(`<!doctype html><html lang="fr"><head><title>${title}</title><style>body{font:16px/1.65 Georgia,serif;max-width:760px;margin:48px auto;padding:0 32px;white-space:pre-wrap;color:#172033}</style></head><body></body></html>`);
+        popup.opener = null;
+        popup.document.write(`<!doctype html><html lang="fr"><head><title>Lettre à imprimer</title><style>body{font:16px/1.65 Georgia,serif;max-width:760px;margin:48px auto;padding:0 32px;white-space:pre-wrap;color:#172033}</style></head><body></body></html>`);
+        popup.document.title = title;
         popup.document.body.textContent = content;
         popup.document.close();
         popup.focus();

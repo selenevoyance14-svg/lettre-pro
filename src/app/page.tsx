@@ -24,8 +24,8 @@ const steps = [
 ];
 
 export default function Home() {
-    const featured = blogArticles.slice(0, 3);
-    const popularModels = ["lettre-demission-cdi", "lettre-preavis-logement-1-mois", "lettre-resiliation-assurance-habitation", "lettre-motivation-candidature-spontanee"]
+    const featured = blogArticles.slice(0, 6);
+    const popularModels = ["attestation-hebergement", "demande-quittance-loyer", "relance-candidature", "reclamation-produit-defectueux"]
         .map((slug) => letterTemplates.find((template) => template.slug === slug))
         .filter((template): template is (typeof letterTemplates)[number] => Boolean(template));
 
@@ -95,7 +95,7 @@ export default function Home() {
             <section className="lp-section">
                 <div className="lp-shell">
                     <div className="lp-heading">
-                        <div><span className="lp-eyebrow">Modèles populaires</span><h2>Les démarches du moment.</h2></div>
+                        <div><span className="lp-eyebrow">Nouveaux modèles</span><h2>De nouveaux modèles pour vos démarches.</h2></div>
                         <p>Des textes prêts à adapter pour les situations les plus courantes, avec les points à vérifier avant l’envoi.</p>
                     </div>
                     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

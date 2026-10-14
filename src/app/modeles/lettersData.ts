@@ -1,3 +1,4 @@
+import { newLetterTemplates } from "./letters-octobre-2026";
 export type LetterCategory = "motivation" | "officielle";
 
 export interface LetterTemplate {
@@ -15,7 +16,7 @@ export interface LetterTemplate {
     content: string;
 }
 
-export const letterTemplates: LetterTemplate[] = [
+const baseLetterTemplates: LetterTemplate[] = [
     {
         slug: "lettre-motivation-cdi",
         category: "motivation",
@@ -670,6 +671,8 @@ Cette formation m’intéresse particulièrement pour [enseignement, spécialisa
 Je vous remercie de l’attention portée à ma candidature.`,
     },
 ];
+
+export const letterTemplates: LetterTemplate[] = [...newLetterTemplates, ...baseLetterTemplates];
 
 export function getLetterTemplate(slug: string) {
     return letterTemplates.find((template) => template.slug === slug);

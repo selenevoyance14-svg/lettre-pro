@@ -1,3 +1,4 @@
+import { toIsoDate } from "../../lib/dates";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -42,7 +43,7 @@ export default function LetterTemplatePage({ params }: Props) {
         name: template.title,
         description: template.description,
         inLanguage: "fr-FR",
-        dateModified: "2026-08-16",
+        dateModified: toIsoDate(template.updatedAt),
         step: [
             { "@type": "HowToStep", name: "Personnaliser", text: "Remplacez les passages entre crochets par vos informations." },
             { "@type": "HowToStep", name: "Vérifier", text: "Relisez les faits, dates, références et coordonnées." },

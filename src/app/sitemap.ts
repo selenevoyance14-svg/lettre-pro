@@ -1,3 +1,4 @@
+import { toIsoDate } from "./lib/dates";
 import type { MetadataRoute } from "next";
 import { blogArticles } from "./blog/blogData";
 import { letterTemplates } from "./modeles/lettersData";
@@ -7,19 +8,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const pages = ["", "/modeles", "/motivation", "/officielle", "/blog", "/mentions-legales", "/affiliation", "/affiliation-amazon", "/confidentialite", "/cgv"];
     const staticPages = pages.map((path) => ({
         url: `${base}${path}`,
-        lastModified: new Date("2026-07-30"),
+        lastModified: new Date("2026-10-14"),
         changeFrequency: path === "" ? "weekly" as const : "monthly" as const,
         priority: path === "" ? 1 : path === "/modeles" ? .9 : .8,
     }));
     const articles = blogArticles.map((article) => ({
         url: `${base}/blog/${article.slug}`,
-        lastModified: new Date("2026-07-30"),
+        lastModified: new Date(article.updatedAt || article.publishedAt || toIsoDate(article.date)),
         changeFrequency: "monthly" as const,
         priority: .7,
     }));
     const templates = letterTemplates.map((template) => ({
         url: `${base}/modeles/${template.slug}`,
-        lastModified: new Date("2026-08-14"),
+        lastModified: new Date(toIsoDate(template.updatedAt)),
         changeFrequency: "monthly" as const,
         priority: .85,
     }));

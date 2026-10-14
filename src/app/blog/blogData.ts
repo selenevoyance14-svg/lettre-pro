@@ -1,8 +1,12 @@
+import { newBlogArticles, blogUpdates } from "./blog-octobre-2026";
+import { toIsoDate } from "../lib/dates";
 export interface BlogArticle {
     slug: string;
     title: string;
     description: string;
     date: string;
+    publishedAt?: string;
+    updatedAt?: string;
     icon: string;
     tag: string;
     tagColor: string;
@@ -11,7 +15,7 @@ export interface BlogArticle {
     cta: { href: string; text: string };
 }
 
-export const blogArticles: BlogArticle[] = [
+const baseBlogArticles: BlogArticle[] = [
     {
         slug: "lettre-motivation-qui-se-demarque",
         title: "Comment rédiger une lettre de motivation qui se démarque",
@@ -3192,3 +3196,5 @@ Cordialement,
         cta: { href: "/motivation", text: "📄 Générer ma lettre de motivation" },
     },
 ];
+
+export const blogArticles: BlogArticle[] = [...newBlogArticles, ...baseBlogArticles.map((article) => ({ ...article, publishedAt: toIsoDate(article.date), ...blogUpdates[article.slug] }))];
