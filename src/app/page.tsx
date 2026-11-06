@@ -25,7 +25,7 @@ const steps = [
 
 export default function Home() {
     const featured = blogArticles.slice(0, 6);
-    const popularModels = ["attestation-hebergement", "demande-quittance-loyer", "relance-candidature", "reclamation-produit-defectueux"]
+    const popularModels = ["lettre-motivation-premier-emploi", "lettre-motivation-job-etudiant", "email-candidature-emploi", "reclamation-produit-defectueux"]
         .map((slug) => letterTemplates.find((template) => template.slug === slug))
         .filter((template): template is (typeof letterTemplates)[number] => Boolean(template));
 

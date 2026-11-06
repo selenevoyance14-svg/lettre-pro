@@ -5,10 +5,10 @@ import { letterTemplates } from "./modeles/lettersData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const base = "https://lettre-pro.fr";
-    const pages = ["", "/modeles", "/motivation", "/officielle", "/blog", "/mentions-legales", "/affiliation", "/affiliation-amazon", "/confidentialite", "/cgv"];
+    const pages = ["", "/modeles", "/motivation", "/officielle", "/blog", "/mentions-legales", "/affiliation", "/affiliation-amazon", "/confidentialite", "/cgv", "/a-propos", "/contact"];
     const staticPages = pages.map((path) => ({
         url: `${base}${path}`,
-        lastModified: new Date("2026-10-14"),
+        lastModified: new Date(["", "/modeles", "/motivation", "/blog", "/a-propos", "/contact"].includes(path) ? "2026-11-06" : "2026-10-14"),
         changeFrequency: path === "" ? "weekly" as const : "monthly" as const,
         priority: path === "" ? 1 : path === "/modeles" ? .9 : .8,
     }));

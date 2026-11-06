@@ -1,3 +1,4 @@
+import { novemberLetterTemplates } from "./letters-novembre-2026";
 import { newLetterTemplates } from "./letters-octobre-2026";
 export type LetterCategory = "motivation" | "officielle";
 
@@ -672,7 +673,7 @@ Je vous remercie de l’attention portée à ma candidature.`,
     },
 ];
 
-export const letterTemplates: LetterTemplate[] = [...newLetterTemplates, ...baseLetterTemplates];
+export const letterTemplates: LetterTemplate[] = [...novemberLetterTemplates, ...newLetterTemplates, ...baseLetterTemplates];
 
 export function getLetterTemplate(slug: string) {
     return letterTemplates.find((template) => template.slug === slug);

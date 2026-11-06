@@ -18,10 +18,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         title: article.title,
         description: article.description,
         alternates: { canonical: `/blog/${article.slug}` },
+        twitter: { card: "summary_large_image", title: article.title, description: article.description, images: ["/og.png"] },
         openGraph: {
             title: article.title,
             description: article.description,
             type: "article",
+            images: [{ url: "/og.png", width: 1200, height: 630 }],
             publishedTime: article.publishedAt,
             modifiedTime: article.updatedAt || article.publishedAt,
             locale: "fr_FR",
@@ -140,10 +142,28 @@ function formatInline(text: string): string {
 export default function BlogArticlePage({ params }: Props) {
     const article = blogArticles.find((a) => a.slug === params.slug);
     if (!article) notFound();
+    const canonical = `https://lettre-pro.fr/blog/${article.slug}`;
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@graph": [
+            { "@type": "Article", headline: article.title, description: article.description,
+              mainEntityOfPage: canonical, datePublished: article.publishedAt,
+              dateModified: article.updatedAt || article.publishedAt, inLanguage: "fr-FR",
+              image: "https://lettre-pro.fr/og.png",
+              author: { "@type": "Organization", name: "Lettre Pro", url: "https://lettre-pro.fr/a-propos" },
+              publisher: { "@type": "Organization", name: "Lettre Pro", url: "https://lettre-pro.fr/" } },
+            { "@type": "BreadcrumbList", itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Accueil", item: "https://lettre-pro.fr/" },
+                { "@type": "ListItem", position: 2, name: "Conseils", item: "https://lettre-pro.fr/blog" },
+                { "@type": "ListItem", position: 3, name: article.title, item: canonical }
+            ] }
+        ]
+    };
     const containsAmazonLinks = /(?:amazon\.fr|amzn\.to)/i.test(article.content);
 
     return (
         <>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
             {/* HEADER */}
             <section className="bg-gradient-to-br from-pro-950 to-pro-800 text-white py-14 sm:py-20">
                 <div className="max-w-3xl mx-auto px-4 text-center">

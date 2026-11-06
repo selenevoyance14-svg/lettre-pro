@@ -18,12 +18,15 @@ export function generateMetadata({ params }: Props): Metadata {
         title: template.title,
         description: template.description,
         alternates: { canonical: `/modeles/${template.slug}` },
+        twitter: { card: "summary_large_image", title: template.title, description: template.description, images: ["/og.png"] },
         openGraph: {
             title: template.title,
             description: template.description,
             url: `https://lettre-pro.fr/modeles/${template.slug}`,
             type: "article",
             locale: "fr_FR",
+            modifiedTime: toIsoDate(template.updatedAt),
+            images: [{ url: "/og.png", width: 1200, height: 630 }],
         },
     };
 }
@@ -51,8 +54,16 @@ export default function LetterTemplatePage({ params }: Props) {
         ],
     };
 
+    const breadcrumbs = {
+        "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Accueil", item: "https://lettre-pro.fr/" },
+            { "@type": "ListItem", position: 2, name: "Modèles", item: "https://lettre-pro.fr/modeles" },
+            { "@type": "ListItem", position: 3, name: template.shortTitle, item: `https://lettre-pro.fr/modeles/${template.slug}` }
+        ]
+    };
     return (
         <>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
             <header className="bg-gradient-to-br from-pro-950 to-pro-800 py-14 text-white sm:py-20">
                 <div className="mx-auto max-w-4xl px-4 sm:px-6">

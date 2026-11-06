@@ -1,3 +1,4 @@
+import { novemberBlogArticles } from "./blog-novembre-2026";
 import { newBlogArticles, blogUpdates } from "./blog-octobre-2026";
 import { toIsoDate } from "../lib/dates";
 export interface BlogArticle {
@@ -3197,4 +3198,4 @@ Cordialement,
     },
 ];
 
-export const blogArticles: BlogArticle[] = [...newBlogArticles, ...baseBlogArticles.map((article) => ({ ...article, publishedAt: toIsoDate(article.date), ...blogUpdates[article.slug] }))];
+export const blogArticles: BlogArticle[] = [...novemberBlogArticles, ...newBlogArticles, ...baseBlogArticles.map((article) => ({ ...article, publishedAt: toIsoDate(article.date), ...blogUpdates[article.slug] }))];

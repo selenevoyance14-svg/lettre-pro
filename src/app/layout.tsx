@@ -71,7 +71,8 @@ function Footer() {
                     <Link href="/mentions-legales">Mentions légales</Link>
                     <Link href="/affiliation">Affiliation et partenaires</Link>
                     <Link href="/confidentialite">Confidentialité</Link>
-                    <a href="mailto:bonsplansmania@gmail.com">Contact</a>
+                    <Link href="/a-propos">À propos</Link>
+                    <Link href="/contact">Contact</Link>
                 </div>
                 <div className="lp-footer-note">
                     <strong>À savoir</strong>
