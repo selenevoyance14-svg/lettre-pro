@@ -17,6 +17,7 @@ const popularSlugs = [
 
 const collections = [
     { title: "Emploi & candidature", icon: "✦", tags: ["Emploi", "Études", "Reconversion"], text: "Postuler, quitter un poste ou faire évoluer son parcours." },
+    { title: "Démarches administratives", icon: "✉", tags: ["Administratif"], text: "Écrire à un service au sujet d’un dossier ou d’une démarche." },
     { title: "Logement", icon: "⌂", tags: ["Logement"], text: "Donner son préavis ou demander une intervention au bailleur." },
     { title: "Résiliation & assurance", icon: "↗", tags: ["Résiliation", "Assurance"], text: "Mettre fin à un contrat avec une demande datée et traçable." },
     { title: "Réclamation & contestation", icon: "§", tags: ["Litige", "Contestation", "Banque"], text: "Exposer les faits, joindre les preuves et demander une solution." },

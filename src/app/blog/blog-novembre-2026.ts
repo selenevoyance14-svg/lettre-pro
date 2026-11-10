@@ -1,6 +1,70 @@
 import type { BlogArticle } from "./blogData";
 export const novemberBlogArticles: BlogArticle[] = [
   {
+    "slug": "emploi-saisonnier-lettre-dates-disponibilites",
+    "title": "Emploi saisonnier : présenter ses dates et sa disponibilité",
+    "description": "Modèle gratuit pour postuler à un emploi saisonnier et préciser les dates, le lieu et les missions que vous pouvez assurer.",
+    "date": "10 novembre 2026",
+    "publishedAt": "2026-11-10",
+    "icon": "✉️",
+    "tag": "Motivation",
+    "tagColor": "bg-blue-100 text-blue-700",
+    "readTime": "2 min",
+    "content": "## Donner deux dates plutôt qu’une saison\n\nÉcrivez « disponible du 15 décembre au 31 mars » si ces dates correspondent à votre calendrier. Si vous ne couvrez qu’une partie de la période, dites-le dès l’ouverture. Le recruteur peut ainsi comparer votre candidature au planning du site. Si vous postulez à plusieurs établissements, relisez les dates et le lieu avant chaque envoi.\n\n## Citer une tâche que vous pourriez reprendre\n\nPour une mission d’accueil, indiquez une situation où vous avez renseigné des visiteurs ou géré une file. Pour de la préparation de commandes, décrivez comment vous avez suivi une liste et contrôlé un résultat. Une phrase suffit si elle dit ce que vous avez fait et le lien avec le poste.\n\n## Aborder la logistique quand elle compte\n\nVérifiez que vous pouvez rejoindre le lieu aux heures de début et de fin annoncées. Si l’offre mentionne un logement, demandez comment il est proposé et à quelles conditions. Si votre arrivée dépend d’une réponse, indiquez-le simplement sans annoncer une disponibilité que vous ne pouvez pas garantir.\n\n## Préparer votre message\n\n[Ouvrir le modèle gratuit](/modeles/lettre-motivation-emploi-saisonnier) et remplacer les champs entre crochets par vos informations. Relisez l’objet et le destinataire avant l’envoi.\n\n## À lire aussi\n\n- [Présenter ses disponibilités pour un job étudiant](/blog/job-etudiant-lettre-disponibilites)",
+    "cta": {
+      "href": "/modeles/lettre-motivation-emploi-saisonnier",
+      "text": "Personnaliser le modèle gratuit"
+    }
+  },
+  {
+    "slug": "candidature-interne-expliquer-transition",
+    "title": "Candidature interne : expliquer le passage à un autre poste",
+    "description": "Un modèle pour candidater dans votre entreprise en reliant vos missions actuelles aux besoins du nouveau poste.",
+    "date": "10 novembre 2026",
+    "publishedAt": "2026-11-10",
+    "icon": "✉️",
+    "tag": "Motivation",
+    "tagColor": "bg-blue-100 text-blue-700",
+    "readTime": "2 min",
+    "content": "## Expliquer votre travail à une autre équipe\n\nLe recruteur interne connaît parfois le nom de votre service sans connaître le contenu de vos missions. Décrivez une réalisation comme vous le feriez pour un interlocuteur extérieur. Précisez votre rôle, ce que vous avez livré et l’effet observable. Écartez les chiffres ou les noms que vous ne pouvez pas partager.\n\n## Relier un acquis à la fiche de poste\n\nSélectionnez une mission du nouveau poste. Si elle porte sur la coordination, décrivez par exemple comment vous avez suivi les dépendances d’un projet. Indiquez aussi le domaine dans lequel vous souhaitez monter en compétence. Le destinataire peut ainsi comprendre ce que vous apporterez rapidement et ce que vous devrez apprendre.\n\n## Vérifier le parcours de candidature\n\nRegardez si l’offre demande un dépôt sur le portail interne, un échange avec les RH ou un message au responsable du recrutement. Respectez les consignes propres à votre entreprise. Pour la date de prise de poste, mentionnez une transition à discuter si aucune date n’a encore été convenue.\n\n## Préparer votre message\n\n[Ouvrir le modèle gratuit](/modeles/lettre-candidature-mobilite-interne) et remplacer les champs entre crochets par vos informations. Relisez l’objet et le destinataire avant l’envoi.\n\n## À lire aussi\n\n- [Rédiger une lettre qui montre une réalisation](/blog/lettre-motivation-qui-se-demarque)",
+    "cta": {
+      "href": "/modeles/lettre-candidature-mobilite-interne",
+      "text": "Personnaliser le modèle gratuit"
+    }
+  },
+  {
+    "slug": "reporter-entretien-embauche-proposer-creneaux",
+    "title": "Reporter un entretien et proposer de nouveaux créneaux",
+    "description": "Un e-mail court pour demander le report d’un entretien, rappeler le rendez-vous initial et proposer de nouveaux créneaux.",
+    "date": "10 novembre 2026",
+    "publishedAt": "2026-11-10",
+    "icon": "✉️",
+    "tag": "Motivation",
+    "tagColor": "bg-blue-100 text-blue-700",
+    "readTime": "2 min",
+    "content": "## Rappeler le rendez-vous dans l’objet\n\nUn même recruteur peut gérer plusieurs entretiens le même jour. Indiquez la date, l’heure et le poste. Si l’échange est imminent, utilisez le canal direct indiqué dans l’invitation, puis confirmez votre demande par écrit si cela facilite le suivi.\n\n## Donner plusieurs options concrètes\n\nProposez des horaires répartis sur deux jours si votre agenda le permet. Ajoutez le fuseau horaire si l’entretien est à distance avec une équipe à l’étranger. Vous pouvez rester bref sur la raison de l’empêchement et recentrer le message sur vos disponibilités.\n\n## Attendre le nouvel horaire confirmé\n\nUne demande de report ne fixe pas automatiquement un rendez-vous. Lorsque le recruteur répond, confirmez l’heure et vérifiez le lieu ou le lien de visioconférence. Mettez à jour votre calendrier en reprenant les détails exacts de sa réponse.\n\n## Préparer votre message\n\n[Ouvrir le modèle gratuit](/modeles/email-reporter-entretien-embauche) et remplacer les champs entre crochets par vos informations. Relisez l’objet et le destinataire avant l’envoi.\n\n## À lire aussi\n\n- [Préparer son entretien d’embauche](/blog/entretien-embauche-preparation-complete)",
+    "cta": {
+      "href": "/modeles/email-reporter-entretien-embauche",
+      "text": "Personnaliser le modèle gratuit"
+    }
+  },
+  {
+    "slug": "demander-confirmation-reception-dossier",
+    "title": "Dossier envoyé : demander une confirmation de réception",
+    "description": "Un modèle pour vérifier si un service a reçu votre dossier, avec les références utiles et une demande simple à personnaliser.",
+    "date": "10 novembre 2026",
+    "publishedAt": "2026-11-10",
+    "icon": "✉️",
+    "tag": "Officielle",
+    "tagColor": "bg-blue-100 text-blue-700",
+    "readTime": "2 min",
+    "content": "## Retrouver la preuve du premier envoi\n\nVérifiez d’abord si votre espace personnel ou votre messagerie contient déjà une confirmation. Relevez la date et la référence exactement comme elles apparaissent. Pour un envoi postal, un numéro de suivi peut compléter ces éléments.\n\n## Poser une question qui correspond à votre besoin\n\nSi vous cherchez uniquement à savoir si le dossier est arrivé, demandez une confirmation de réception. Si la réception est déjà confirmée et que vous attendez une réponse sur le fond, formulez plutôt une demande d’avancement. Ces deux demandes peuvent être traitées par des interlocuteurs différents.\n\n## Limiter les informations transmises\n\nIndiquez la référence, le nom du service et l’objet de la démarche. Si vous devez transmettre une pièce contenant des informations personnelles, utilisez le canal indiqué par le destinataire. Avant de renvoyer le dossier complet, vérifiez quelles pièces sont réellement demandées.\n\n## Préparer votre message\n\n[Ouvrir le modèle gratuit](/modeles/lettre-confirmer-reception-dossier) et remplacer les champs entre crochets par vos informations. Relisez l’objet et le destinataire avant l’envoi.\n\n## À lire aussi\n\n- [Rédiger une relance professionnelle](/blog/rediger-mail-relance-professionnel)",
+    "cta": {
+      "href": "/modeles/lettre-confirmer-reception-dossier",
+      "text": "Personnaliser le modèle gratuit"
+    }
+  },
+  {
     "slug": "premier-emploi-sans-experience-lettre",
     "title": "Premier emploi : écrire une lettre sans expérience",
     "description": "Présentez votre formation et vos projets sans inventer d’expérience : un modèle gratuit de lettre de motivation pour un premier emploi.",
